@@ -1,0 +1,9 @@
+#git ignores all files with the following endings
+*.log
+*.pdf
+*.aux
+*.nav
+*.out
+*.snm
+*.toc
+*.tex_dep
