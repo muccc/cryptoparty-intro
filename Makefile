@@ -1,4 +1,4 @@
-docs	= muccc
+docs	= cryptoparty-intro
 tex_ext	= pdf aux log toc nav snm
 
 TEX_FLAGS	= -interaction=nonstopmode
