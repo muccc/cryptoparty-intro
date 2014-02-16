@@ -1,4 +1,4 @@
-\section{Über das FIfF, den µc³, unsere Cryptoparty, die Anderen, Alice und Bob}
+\section{Über den µc³ und unsere Cryptoparty}
   \begin{frame}{Das FIfF}
     Forum InformatikerInnen für Frieden und gesellschaftliche Verantwortung e.V.
   \end{frame}
@@ -8,7 +8,7 @@
       \item{... und deren Auswirkungen auf die Gesellschaft}
       \item{soll sagen: Auf Chancen hinweisen, vor Risiken warnen}
       % FIXME - Tilde wird gefressen
-      \item{Viele Leute (~129 Mitglieder), viele Themen}
+      \item{Viele Leute (~130 Mitglieder), viele Themen}
       \item{Für: Informations- und Kommunikationsfreiheit}
       \item{Gegen: Zensur}
       \item{Kunst, Kultur und Wissenschaft fördern}
@@ -28,13 +28,10 @@
     \begin{itemize}
       \item{Wir zeigen euch wie ihr Verschlüsselungstechniken für euch nutzen könnt}
       \begin{itemize}
-         \item{GnuPG - für E-Mail-Verschlüsselung und -Signierung}
-         \item{OTR - für Chatverschlüsselung}
-         \item{Truecrypt - für Datenträgerverschlüsselung}
-         \item{Keepass - für sichere Passwortspeicherung}
-         \item{TOR - Anonymeres surfen im WWW}
+        \item{Passwort-Management}
+        \item{Anonymes Web-Surfen}
+        \item{\ldots und mehr auf Anfrage}
       \end{itemize}
-      \item{Wir versuchen auch auf Risiken und Probleme dabei hinzuweisen}
     \end{itemize}
   \end{frame}
   \begin{frame}{Die Anderen}
@@ -45,187 +42,193 @@
       \item{Achtung! Ihr seid im Internet.}
     \end{itemize}
   \end{frame}
-  \begin{frame}{Alice und Bob}
+
+\section{``Theorie'' oder Einführende Worte}
+  \begin{frame}{Warnhinweise}
     \begin{itemize}
-      \item{Fiktive Figuren, bekannt aus Film und Fernsehen (na gut, der fachbezogenen Literatur}
-      \item{Alice - Sender, will eine Nachricht verschlüsselt verschicken}
-      \item{... meistens an Bob}
-      \item{Bob - Empfänger, will die verschlüsselte Nachricht von Alice (rechtmässig) lesen}
-      \item{Carol und Dave, sind Dritte, aber lieb}
-      \item{Eve, von engl. eavesdropper, ist eine passive Lauscherin}
-      \item{Mallory, Marvin oder Mallet, von engl. malicious (hinterhältig, heimtückisch), sind aktive Angreifer}
-      \item{... und noch viele mehr}
-    \end{itemize}
-  \end{frame}
-\section{Crypto - was ist das und was ist es nicht?}
-% Schutz vor kleiner Schwester vs. Schutz vor Geheimdiensten, Industriespionage und bösen Regimen
-  \begin{frame}{Die Wissenschaft Kryptographie}
-    \begin{itemize}
-%      \item{stammt vom altgr. κρυπτός (geheim, verborgen) und γράφειν (schreiben) ab}
-      \item{ursprünglich Wissenschaft der Verschlüsselung von Informationen}
-      \item{heute: Teilbereich der Kryptologie}
-      \item{zweiter Teil: Kryptoanalyse - Methoden und Techniken um Kryptographie zu brechen/wiederlegen)}
-    \end{itemize}
-  \end{frame}
-  \begin{frame}{Wofür nun Kryptographie?}
-    \begin{itemize}
-      \item{Nicht zu verwechseln mit der Steganographie (bedeckt schreiben) (UV-Stift)} 
-      \item{Schützt nicht (nur) das Tagebuch vor der kleinen Schwester,}
-      \item{sondern kriegsentscheidende(!) Informationen vor'm Feind.}
-      \item{Enormes kommerzielles Interesse (Industriespionage)}
-      \item{Aber auch militärisch (Kommunikation im Krieg, diplomatische Informationen)}
-      \item{Und geheimdienstlich (sog. Terrorabwehr)}
-      \item{Heute kann (fast) jeder Kryptographie nutzen, YEAH! Aber warum?}
-    \end{itemize}
-  \end{frame}
-\section{Eine kurze Reise in die Vergangenheit}
-% http://de.wikipedia.org/wiki/Geschichte_der_Kryptographie
-  \begin{frame}{Die ersten Schritte}
-    \begin{itemize}
-      \item{drittes Jahrtausend v. Chr.: altägyptische Kryptographie}
-      \item{Andere Schriftzeichen, die nur eingeweihte kannten}
-      \item{fünftes Jahrhundert v. Chr.: Griechen nutzen Skytala (Verschlüsselungsstab) (Transposition)}
-      \item{100 v. Chr. - 44 n. Chr.: Cäsar-Chiffre}
-      \item{Im Mittelalter 500 - 1500 quasi nichts Neues}
-      \item{Weglassen von Vokalen, andere Alphabete, ... Lame!}
-    \end{itemize}
-  \end{frame}
-  \begin{frame}{Krieg, tolle Motivation...}
-    \begin{itemize}
-      \item{1466 - in Italien verfeindete Stadtstaaten}
-      \item{Aus Angst vor Mitlesern Bedarf an Verschlüsselung}
-      \item{Leon battista Alberti beschreibt die Chiffrierscheibe}
-      \item{Wieder sehr ähnlich zum altgriechischen Ansatz}
-    \end{itemize}
-  \end{frame}
-  \begin{frame}{Vigenère-Chiffre}
-    \begin{itemize}
-      \item{Blaise de Vigenère 'klaut' 1586 die Tabula recta Chiffre}
-      % wie funktioniert die?
-      \item{Eigentlich von einem Benediktinerabt Johannes Trithemius 1508 niedergeschrieben}
-      \item{300 Jahre lang ungebrochen!}
-    \end{itemize}
-  \end{frame}
-  \begin{frame}{Erster Weltkrieg, ADFGX}
-    \begin{itemize}
-      \item{Telegraphie}
-      \item{Ab 1. März 1918 an der deutschen Westfront eingesetzt}
-      \item{Substitution (Ersetzung von Zeichen durch andere)}
-      \item{gefolgt von einer Transposition (Vertauschung der Anordnung der Zeichen)}
-      \item{Im April (1918 zu Beginn deutscher Frühjahrsoffensive) geknackt}
-      \item{durch franz. Artillerie-Offizier Capitaine Georges Painvin, vermutlich dadurch Einnahme von Paris verhindert}
-      \item{mehrere Iterationen, aber nie lange gehalten}
-    \end{itemize}
-  \end{frame}
-  \begin{frame}{Zweiter Weltkrieg - Maschinen übernehmen}
-    \begin{itemize}
-      \item{Nach den Problemen im 1. Weltkrieg direkt Entwicklung erster Maschinen}
-      \item{Gilbert Vernam 1918: Idee der One-Time-Pads}
-      \item{Franzosen verwendeten im zweiten Weltkrieg ein schwer erhältliches Buch als OTP}
-      \item{Deutsche haben das Buch bekkommen und haben nachträglich alles entschlüsselt}
-      \item{Enigma: Sehr populäre Rotor-Chiffriermaschine -> polyalphabetische Verschlüsselung}
-      \item{Enigma: Idee von Arthur Scherbius, Februar 1918, ab den 1930er populär, 30k-200k Maschinen}
-      \item{Enigma: 1937 von Polen kurz geknackt, 1938 mehr Walzen(Rotoren) -> wieder abgehängt}
-      \item{Kryha-Maschine vom Ukrainer Alexander von Kryha: 1933 geknackt, bis 1950 genutzt!}
-      \item{Viele Rotor-Maschinen, die meisten bald geknackt}
-    \end{itemize}
-  \end{frame}
-  \begin{frame}{Und dann?}
-    \begin{itemize}
-      \item{Militärische Verfahren immer schlechter nachvollziehbar, wegen Gehimhaltung}
-      \item{Computer, Satelliten, neue Kommunikationswege -> abhörbar}
-      \item{Industrie fing an, interessiert zu sein}
-      \item{Forschungsgelder waren verfügbar}
-      \item{Wissenschaftliches Arbeiten etablierte sich}
+      \item 100 \%-ige Sicherheit gibt es nicht
+      \item Ziel von Absichrung ist es
       \begin{itemize}
-        \item{1. These aufstellen, Kryptographie}
-        \item{2. Veröffentlichen, Magazine, Open Source, Wettbewerbe}
-        \item{3. Versuch zu Widerlegen, Kryptoanalyse}
+        \item Angriffe \textit{teurer} zu machen
+        \item und \textit{nicht}, sie unmöglich zu machen
       \end{itemize}
-      \item{Resulat: Immer bessere, offen verfügbare Algorithmen}
-      \item{Viele kommerzielle Versuche, zu wenig Kryptoanalyse, immer wieder Fehlschläge}
-      \item{Security by Obscurity funktioniert hier nicht!}
-      \item{Willkommen im Heute!}
+      \item vor gezielten Angriffen, hinter denen viele Ressourcen (Geld) stecken, kann man sich kaum schützen
     \end{itemize}
   \end{frame}
-\section{Symmetrische Verschlüsselung}
-  \begin{frame}{Symmetrische (private key) Verschlüsselung - WTF?}
+  \begin{frame}{Wichtige Fragen für Euch}
     \begin{itemize}
-      \item{Viele Varianten, eine Gemeinsamkeit:}
-      \item{Gleicher Schlüssel für's Ver- und Ent-schlüsseln}
-      \item{Einfaches Beispiel: Caesar-Chiffre}
+      \item \textbf{Was} soll geschützt werden?
+        \begin{itemize}
+          \item Anonymität
+          \item Echtheit des Gegenübers (Authentizität)
+          \item Vertraulichkeit der Daten
+          \item \ldots
+        \end{itemize}
+      \item Wem vertraut Ihr?
     \end{itemize}
   \end{frame}
-  \begin{frame}{Caesar-Chiffre}
+
+  \begin{frame}{Vertrauen}
+    \textbf{Woher weiß man, wem oder was man vertrauen kann?}
     \begin{itemize}
-      \item{Npu jvr thg qnff avrznaq jrvff qnff vpu Ehzcryfgvympura urvff}
-      \item{Hirntauglich: A = N, B = O, C = P, ...}
-      \item{Computertauglich:}
-      \item{$\text{encrypt}_K(P) = (P + K) \mod{26}$}
-      \item{$\text{decrypt}_K(C) = (C - K) \mod{26}$}
-      \item{Mal ausprobieren? - Belohnung: Mate!}
+      \item Kurze Antwort: weiß man \textbf{nicht}.
+      \item Lange Antwort
+      \begin{itemize}
+        \item es gibt Fragen, die man stellen kann\ldots
+        \item {\ldots}und es gibt das Bauchgefühl.
+      \end{itemize}
     \end{itemize}
   \end{frame}
-  \begin{frame}{}
+\begin{frame}{Welche Fragen kann man stellen?}
+  \begin{itemize}
+    \item \textbf{Wo} sind meine Daten?
     \begin{itemize}
-      \item{Problem: Die Kryptoanalytiker lachen darüber nur schlecht}
-      \item{Häufigkeit von Buchstaben erlauben z.B. Rückschlüsse auf Key!}
-      \item{Das ist aber nur eine sehr einfache von vielen Methoden}
-      \item{Antwort: Die Kryptographen legen nach..}
-      \item{RC4, Blowfish, DES, 3DES, Twofisch, ... wirklich lange Liste}
-      \item{Block- vs. Streamchiffre, deutlich mehr als nur Substitution}
+      \item Auf einem Blatt Papier in meiner Schublade
+      \item Auf meinem Computer: Wie gut ist die Software \textbf{überprüfbar}, die meine Daten verwaltet?
+        \begin{itemize}
+          \item Open Source (in menschenlesbarer Form öffentlich):\\gut überprüfbar
+          \item Closed Source (nur in maschinenlesbarer Form öffentlich):\\nicht überprüfbar
+        \end{itemize}
+      \item In der Cloud: \textbf{Wer} betreibt einen Dienst\\und \textbf{welche Motivation} hat der Betreiber?
+        \begin{itemize}
+          \item Macht der Betreiber einen vertrauenswürdigen Eindruck?
+          \item Womit verdient der Betreiber sein Geld?
+          \item Inwieweit ist man bereit,\\ \textbf{Komfort gegen Kontrolle einzutauschen}?
+        \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+  \begin{frame}{Meta- und Nutzdaten}
+    \begin{itemize}
+      \item Metadaten
+      \begin{itemize}
+        \item E-Mail: Wer hat wann an wen mit welcher Betreffzeile eine E-Mail geschickt
+        \item Surfen: Wer hat wann welche Webseite besucht
+        \item Mobilfunk: Wer hat wann von wo mit wem kommuniziert
+      \end{itemize}
+      \item Nutzdaten
+      \begin{itemize}
+        \item E-Mail: Was waren Inhalt und Anhänge?
+        \item Surfen: Welche Inhalte waren auf der Webseite?
+        \item Mobilfunk: Was wurde geschrieben oder gesprochen?
+      \end{itemize}
     \end{itemize}
   \end{frame}
-  \begin{frame}{Symmetrische Verschlüsselung - Zusammengefasst}
+
+  \begin{frame}{Kryptographie}
     \begin{itemize}
-      \item{Gleicher Schlüssel für Ver- und Ent-schlüsseln}
-      \item{Selbst recht sichere Implementierungen sehr schnell}
-      \item{Dadurch geeignet größere Datenmengen zu Verschlüsseln}
-      \item{Aaaaber: Beide müssen den Schlüssel kennen, das ist nicht sehr praktisch}
-      \item{Deshalb: Asymmetrische Verschlüsselung}
+      \item Symmetrisch: \textit{ein} \textbf{geheimer} ``Schlüssel'' (= lange Zahl)
+      \begin{itemize}
+        \item braucht einen \textbf{sicheren Kanal} zur Vereinbarung eines Schlüssels zwischen zwei Kommunikationspartnern
+        \item Anwendungsfälle
+        \begin{itemize}
+          \item Festplattenverschlüsselung
+          \item Zip-Dateien mit Passwort
+        \end{itemize}
+      \end{itemize}
+      \item Asymmetrisch: ein \textbf{geheimer} \textit{und} ein dazu passender \textbf{öffentlicher} Schlüssel bilden ein \textbf{Schlüsselpaar}
+      \begin{itemize}
+        \item braucht \textbf{keinen} (!!) sicheren Kanal zur Vereinbarung eines Schlüssels zwischen zwei Kommunikationspartnern
+      \end{itemize}
     \end{itemize}
   \end{frame}
-\section{Asymmetrische (public key) Verschlüsselung}
-% Asymmetrische Verschlüsselung (rsa, ..?)
-  \begin{frame}{Asymmetrische (public key) Verschlüsselung}
+
+\section{Praktischer Teil}
+  \subsection{Passwörter}
+    \begin{frame}{Passwörter}
+      \Large Wer nutzt mindestens fünf Internet-Dienste, bei denen man sich anmelden muss?
+    \end{frame}
+    \begin{frame}{Passwörter}
+      \Large Und wer hat dafür mindestens drei verschiedene Passwörter?
+    \end{frame}
+    \begin{frame}{Passwörter: Nützliche Tipps}
+      \begin{itemize}
+        \item Ideal: Jedes Passwort nur einmal verwenden
+        \begin{itemize}
+          \item Besonders kritisch: E-Mail-Accounts, da ``Passwort zurücksetzen''-Funktionen oft per E-Mail funktionieren
+        \end{itemize}
+        \item Passwort-Manager sind eine sicherer, als überall das gleiche Passwort zu verwenden
+        \item Wenn das zu kompliziert ist: Passwörter leicht variieren (``salzen'')
+        \begin{itemize}
+          \item 1Quastenfl0sser.mai für Mail
+          \item 1Quastenfl0sser.son für Social Network
+          \item \ldots
+        \end{itemize}
+      \end{itemize}
+    \end{frame}
+    \begin{frame}{Passwort-Manager}
+      \begin{itemize}
+        \item Software zur Verwaltung von Passwörtern
+        \item Datenbank wird mit einem Passwort verschlüsselt
+        \item Beispiel: KeePassX
+      \end{itemize}
+        \includegraphics[width=\textwidth]{images/keepassx.png}
+      \begin{itemize}
+        \item \textbf{Wichtige Passwörter trotzdem merken!}
+        \item \ldots oder zumindest auf einem Zettel aufschreiben und zuhause an einem sicheren Ort lagern
+      \end{itemize}
+    \end{frame}
+    \begin{frame}{Aber wie soll man sich Passwörter merken?}
+      \begin{center}
+        \includegraphics[width=0.9\textheight]{images/password_strength.png}\\
+      \end{center}
+      \tiny Quelle: \url{http://xkcd.com/936/}
+    \end{frame}
+  \subsection{Web-Surfen}
+  \begin{frame}{Anonymes Werbsurfen}
     \begin{itemize}
-      \item{Gemeinsammer Schlüssel bringt Probleme. Lösung:}
-      \item{Ein Schlüssel für's Verschlüssen: Public Key}
-      \item{Kann öffentlich sein!}
-      \item{Ein Schlüssel für's Entschlüssen: Private Key}
-      \item{Muss unbedingt privat bleiben, da man damit alle Nachrichten entschlüsseln kann}
-      \item{Basieren auf 'mathematischen Probleme', z.B. Primzahlen, ...}
+      \item Anfallende Meta-Daten
+      \begin{itemize}
+        \item Cookies und Co (HTML5 Persistent Local Storage, Flashcookies, \ldots)
+        \item Browser-Fingerabdruck
+        \item IP-Adresse
+      \end{itemize}
+      \item Was kann man dagegen tun
+      \begin{itemize}
+        \item \textbf{Einfach}: Tor Browser Bundle\\ \url{https://www.torproject.org}\\[.5cm]
+        \item \textbf{Ohne Spuren am PC}: Tails\\ \url{https://tails.boum.org}\\[.5cm]
+        \item Alternative: Browser-Plugins
+          \begin{itemize}
+            \item NoScript, ClickToPlugin, AdBlockPlus, Ghostery (Achtung: Closed Source), \ldots 
+          \end{itemize}
+      \end{itemize}
     \end{itemize}
   \end{frame}
-% Summup: Private (decrypt) und Public (crypt) key, +sender braucht meinen private key nicht, -sehr resourcenfressend, -eher für kleine nachrichten geeignet -> hybrid, known secret
-  \begin{frame}{Public Key Verschlüsselung in der Praxis}
+
+  \subsection{E-Mail}
+  \begin{frame}
+    E-Mail können
     \begin{itemize}
-      \item{Kann zum Verschlüsseln an 'Fremde' Partner dienen}
-      \item{Kann zum Signieren der eigenen Nachrichten genutzt werden}
-      \item{Aber nur wenn mein Public Key bekannt und 'vertrauenswürdig' ist}
-      \item{Stellt die Basis für SSL/TLS dar}
-      \item{Vetrauenswürdigkeit wird über sog. CA (Certificate Authorities) hergestellt}
-      \item{Stellt die Basis für PGP/GPG dar}
-      \item{Vertrauenswürdigkeit wird über eigene Einschätzung und 'Web of trust' hergestellt}
+      \item abgehört
+      \item gefälscht
+    \end{itemize}
+    werden. Deshalb stellen wir vor, wie man
+    \begin{itemize}
+      \item die Vertraulichkeit (das ``Briefgeheimnis'') umsetzt
+      \item die Echtheit des Gegenübers sicherstellt
     \end{itemize}
   \end{frame}
-  \begin{frame}{Public Key Verschlüsselung}
+
+  \begin{frame}{Analogie zur Vertraulichkeit von E-Mails}
     \begin{itemize}
-      \item{Eigener Schlüssel für's Ver- und Entschlüssen}
-      \item{Der Schlüssel für's Entschlüsseln muss geheim bleiben}
-      \item{Leider resourcenfressend}
-      \item{Also nur für kleine Nachrichten geeignet}
-      \item{Deshalb: Hybride Verschlüsselung}
-    \end{itemize}
-  \end{frame}
-\section{Hybride Verschlüsselung}
-  \begin{frame}{Hybride Verschlüsselung}
-    \begin{itemize}
-      \item{Wir wollen schnell Verlüsseln: Symmetrische Verschlüsselung}
-      \item{Das erfordert aber ein gemeinsames Geheimnis (shared key)}
-      \item{Public Key (asymmetrische Verschlüsselung) zum Austausch nutzen}
-      \item{Guter Kompromiss!}
-      \item{Beispiel: Diffie Hellmann Key Exchange, wichtige Basis}
+      \item E-Mails sind ``Postkarten''
+      \item diese werden in ``gläsernen Fahrzeugen'' transportiert
+      \begin{itemize}
+        \item ``Autobahnbetreiber'' kann alles mithören
+        \item ``Post'' kann alles mithören
+      \end{itemize}
+      \item Bei \textbf{Transportverschlüsselung} ersetzt die ``Post'' die ``gläsernen Fahrzeuge'' durch ``undurchsichtige Fahrzeuge''
+      \begin{itemize}
+        \item ``Autobahnbetreiber'' kann mithören,\\welche ``Post'' mit welcher anderen ``Post'' kommuniziert
+        \item ``Post'' kann alles mithören
+      \end{itemize}
+      \item Bei \textbf{Ende-zu-Ende-Verschlüsselung} steckt der Absender die ``Postkarte'' in einen ``Briefumschlag''
+      \begin{itemize}
+        \item ``Autobahnbetreiber'' kann mithören,\\wer mit wem kommuniziert
+        \item ``Post'' kann mithören, wer mit wem kommuniziert
+      \end{itemize}
+      \item Wir stellen hier Ende-zu-Ende-Verschlüsselung vor.
     \end{itemize}
   \end{frame}
 \section{Fragen, Feedback}
