@@ -1,4 +1,4 @@
-\section{Über den µc³ und unsere Cryptoparty}
+\section{Über den FIfF, den µc³ und unsere Cryptoparty}
   \begin{frame}{Das FIfF}
     Forum InformatikerInnen für Frieden und gesellschaftliche Verantwortung e.V.
   \end{frame}
@@ -9,8 +9,6 @@
       \item{soll sagen: Auf Chancen hinweisen, vor Risiken warnen}
       % FIXME - Tilde wird gefressen
       \item{Viele Leute (~130 Mitglieder), viele Themen}
-      \item{Für: Informations- und Kommunikationsfreiheit}
-      \item{Gegen: Zensur}
       \item{Kunst, Kultur und Wissenschaft fördern}
       \item{Immer: Spaß am Gerät}
     \end{itemize}
@@ -116,7 +114,7 @@
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Kryptographie}
+  \begin{frame}{Kryptographie auf einer Folie}
     \begin{itemize}
       \item Symmetrisch: \textit{ein} \textbf{geheimer} ``Schlüssel'' (= lange Zahl)
       \begin{itemize}
@@ -130,52 +128,56 @@
       \item Asymmetrisch: ein \textbf{geheimer} \textit{und} ein dazu passender \textbf{öffentlicher} Schlüssel bilden ein \textbf{Schlüsselpaar}
       \begin{itemize}
         \item braucht \textbf{keinen} (!!) sicheren Kanal zur Vereinbarung eines Schlüssels zwischen zwei Kommunikationspartnern
+        \item Verwendung
+          \begin{itemize}
+            \item Verschlüsseln mit öffentlichem Schlüssel,\\Entschlüsseln mit geheimem Schlüssel
+            \item \textit{Digitale Signatur} von Daten mit dem privaten Schlüssel\\als Echtheitsbestätigung
+          \end{itemize}
       \end{itemize}
     \end{itemize}
   \end{frame}
 
-\section{Praktischer Teil}
-  \subsection{Passwörter}
-    \begin{frame}{Passwörter}
-      \Large Wer nutzt mindestens fünf Internet-Dienste, bei denen man sich anmelden muss?
-    \end{frame}
-    \begin{frame}{Passwörter}
-      \Large Und wer hat dafür mindestens drei verschiedene Passwörter?
-    \end{frame}
-    \begin{frame}{Passwörter: Nützliche Tipps}
+\section{Passwörter}
+  \begin{frame}{Passwörter}
+    \Large Wer nutzt mindestens fünf Internet-Dienste, bei denen man sich anmelden muss?
+  \end{frame}
+  \begin{frame}{Passwörter}
+    \Large Und wer hat dafür mindestens drei verschiedene Passwörter?
+  \end{frame}
+  \begin{frame}{Passwörter: Nützliche Tipps}
+    \begin{itemize}
+      \item Ideal: Jedes Passwort nur einmal verwenden
       \begin{itemize}
-        \item Ideal: Jedes Passwort nur einmal verwenden
-        \begin{itemize}
-          \item Besonders kritisch: E-Mail-Accounts, da ``Passwort zurücksetzen''-Funktionen oft per E-Mail funktionieren
-        \end{itemize}
-        \item Passwort-Manager sind eine sicherer, als überall das gleiche Passwort zu verwenden
-        \item Wenn das zu kompliziert ist: Passwörter leicht variieren (``salzen'')
-        \begin{itemize}
-          \item 1Quastenfl0sser.mai für Mail
-          \item 1Quastenfl0sser.son für Social Network
-          \item \ldots
-        \end{itemize}
+        \item Besonders kritisch: E-Mail-Accounts, da ``Passwort zurücksetzen''-Funktionen oft per E-Mail funktionieren
       \end{itemize}
-    \end{frame}
-    \begin{frame}{Passwort-Manager}
+      \item Passwort-Manager sind eine sicherer, als überall das gleiche Passwort zu verwenden
+      \item Wenn das zu kompliziert ist: Passwörter leicht variieren (``salzen'')
       \begin{itemize}
-        \item Software zur Verwaltung von Passwörtern
-        \item Datenbank wird mit einem Passwort verschlüsselt
-        \item Beispiel: KeePassX
+        \item 1Quastenfl0sser.mai für Mail
+        \item 1Quastenfl0sser.son für Social Network
+        \item \ldots
       \end{itemize}
-        \includegraphics[width=\textwidth]{images/keepassx.png}
-      \begin{itemize}
-        \item \textbf{Wichtige Passwörter trotzdem merken!}
-        \item \ldots oder zumindest auf einem Zettel aufschreiben und zuhause an einem sicheren Ort lagern
-      \end{itemize}
-    \end{frame}
-    \begin{frame}{Aber wie soll man sich Passwörter merken?}
-      \begin{center}
-        \includegraphics[width=0.9\textheight]{images/password_strength.png}\\
-      \end{center}
-      \tiny Quelle: \url{http://xkcd.com/936/}
-    \end{frame}
-  \subsection{Web-Surfen}
+    \end{itemize}
+  \end{frame}
+  \begin{frame}{Passwort-Manager}
+    \begin{itemize}
+      \item Software zur Verwaltung von Passwörtern
+      \item Datenbank wird mit einem Passwort verschlüsselt
+      \item Beispiel: KeePassX
+    \end{itemize}
+      \includegraphics[width=\textwidth]{images/keepassx.png}
+    \begin{itemize}
+      \item \textbf{Wichtige Passwörter trotzdem merken!}
+      \item \ldots oder zumindest auf einem Zettel aufschreiben und zuhause an einem sicheren Ort lagern
+    \end{itemize}
+  \end{frame}
+  \begin{frame}{Aber wie soll man sich Passwörter merken?}
+    \begin{center}
+      \includegraphics[width=0.9\textheight]{images/password_strength.png}\\
+    \end{center}
+    \tiny Quelle: \url{http://xkcd.com/936/}
+  \end{frame}
+\section{Web-Surfen}
   \begin{frame}{Anonymes Werbsurfen}
     \begin{itemize}
       \item Anfallende Meta-Daten
@@ -196,9 +198,9 @@
     \end{itemize}
   \end{frame}
 
-  \subsection{E-Mail}
-  \begin{frame}
-    E-Mail können
+\section{E-Mail}
+  \begin{frame}{E-Mails: Was soll geschützt werden?}
+    E-Mails können
     \begin{itemize}
       \item abgehört
       \item gefälscht
@@ -206,7 +208,13 @@
     werden. Deshalb stellen wir vor, wie man
     \begin{itemize}
       \item die Vertraulichkeit (das ``Briefgeheimnis'') umsetzt
+      \begin{itemize}
+        \item Verschlüsselung
+      \end{itemize}
       \item die Echtheit des Gegenübers sicherstellt
+      \begin{itemize}
+        \item Digitale Signatur
+      \end{itemize}
     \end{itemize}
   \end{frame}
 
@@ -231,6 +239,47 @@
       \item Wir stellen hier Ende-zu-Ende-Verschlüsselung vor.
     \end{itemize}
   \end{frame}
+
+  \begin{frame}{Überprüfung der Echtheit}
+\begin{itemize}
+  \item Was passiert, wenn zwei Parteien kommunizieren wollen, die sich nicht kennen?\\[.5cm]
+  \item Allgemein: A kann mittels Digitaler Signatur sagen:\\``Der öffentliche Schlüssel von B ist echt.''
+  \item Diese Aussage kann mit dem öffentlichen Schlüssel von A überprüft werden
+  \item Wer A vertraut, kann also auch B vertrauen
+\end{itemize}
+  \end{frame}
+
+  \begin{frame}{S/MIME und GnuPG}
+    \begin{itemize}
+      \item S/MIME -- ``Hierarchischer'' Vertrauensansatz
+      \begin{itemize}
+        \item Es gibt ``zentrale Vertrauensinstanzen'' (Certification Authorities, CAs), denen \textbf{jeder} vertraut
+        \item Diese bestätigen die Echtheit der Schlüssel von  \textit{untergeordneten} CAs
+        \item \ldots eine (beliebige) CA aus der Vertrauenskette kann die Echtheit von Schlüsseln von Personen bestätigen
+        \item wird hier \textit{nicht} behandelt
+      \end{itemize}
+      \item GnuPG
+      \begin{itemize}
+        \item jeder kann festlegen, wem er vertraut
+        \begin{itemize}
+          \item er kann die Echtheit eines Schlüssels z.B. bei einem persönlichen Treffen überprüfen
+        \end{itemize}
+        \item jeder \textit{kann} sein Vertrauensnetz veröffentlichen (Web-of-Trust)
+        \begin{itemize}
+          \item Vorteil: Man kann auch ``Freunden von Freunden'' vertrauen
+          \item Nachteil: Beziehungen zwischen Menschen sind öffentlich 
+        \end{itemize}
+        \item wird hier behandelt
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{E-Mail-Absicherung mit GnuPG}
+    \begin{centering}
+      \Huge Live-Demo
+    \end{centering}
+  \end{frame}
+
 \section{Fragen, Feedback}
   \begin{frame}{Fragen, Feedback, ...}
     \begin{itemize}
