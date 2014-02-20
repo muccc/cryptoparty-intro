@@ -5,11 +5,14 @@ TEX_FLAGS	= -interaction=nonstopmode
 
 TEX2PDF	= pdflatex $(TEX_FLAGS)
 DOT2PNG	= dot -Tpng
+SVG2PDF = inkscape 
 MKIDX	= makeindex
 SED	= sed
 
 pdf_docs	= $(patsubst %,%.pdf,$(docs))
 dot_figs	= $(wildcard graphs/*.dot)
+svg_figs        = $(wildcard images/*.svg)
+svgpdf_figs     = $(patsubst %.svg,%.pdf,$(svg_figs))
 png_figs	= $(patsubst %.dot,%.png,$(dot_figs))
 tex_docs	= $(wildcard *.tex include/*.tex)
 
@@ -42,6 +45,10 @@ all: $(targets)
 $(png_figs): %.png: %.dot
 	@echo "DOT	$*"; \
 	$(DOT2PNG) $^ > $@
+
+$(svgpdf_figs): %.pdf: %.svg
+	@echo "SVGPDF   $*"
+	inkscape --export-pdf=$@ $<
 
 .DELETE_ON_ERROR: $(pdf_docs)
 %.pdf: %.tex
