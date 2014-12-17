@@ -47,8 +47,8 @@ $(png_figs): %.png: %.dot
 	$(DOT2PNG) $^ > $@
 
 $(svgpdf_figs): %.pdf: %.svg
-	@echo "SVGPDF   $*"
-	inkscape --export-pdf=$@ $<
+	@echo "SVG      $*"; \
+	$(SVG2PDF) --export-pdf=$@ $<
 
 .DELETE_ON_ERROR: $(pdf_docs)
 %.pdf: %.tex
@@ -74,6 +74,11 @@ clean:
 		f=`basename $$i .dot`; \
 		echo "CLEAN	$$f"; \
 		rm -f $$f.png; \
+	done; \
+	for i in $(svg_figs); do \
+		f=`basename $$i .svg`; \
+		echo "CLEAN	$$f"; \
+		rm -f $$f.pdf; \
 	done; \
 	rm -f .tex_dep
 
