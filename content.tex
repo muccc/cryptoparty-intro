@@ -53,7 +53,7 @@
         \item Angriffe \textit{teurer} zu machen
         \item und \textit{nicht}, sie unmöglich zu machen
       \end{itemize}
-      \item vor gezielten Angriffen, hinter denen viele Ressourcen (Geld) stecken, kann man sich kaum schützen
+      \item vor gezielten Angriffen, hinter denen viele Ressourcen (Zeit und Geld) stecken, kann man sich nur ebenfalls mit viel Aufwand schützen
     \end{itemize}
   \end{frame}
   \begin{frame}{Wichtige Fragen für Euch}
@@ -90,10 +90,11 @@
           \item Open Source (in menschenlesbarer Form öffentlich):\\gut überprüfbar
           \item Closed Source (nur in maschinenlesbarer Form öffentlich):\\nicht überprüfbar
         \end{itemize}
-      \item In der Cloud: \textbf{Wer} betreibt einen Dienst\\und \textbf{welche Motivation} hat der Betreiber?
+      \item In der Cloud
         \begin{itemize}
-          \item Macht der Betreiber einen vertrauenswürdigen Eindruck?
-          \item Womit verdient der Betreiber sein Geld?
+          \item \textbf{Wer} betreibt einen Dienst?
+          \item Womit \textbf{verdient} der Betreiber sein \textbf{Geld}?
+          \item \textbf{Welche Daten} fallen beim Betreiber an?
           \item Inwieweit ist man bereit,\\ \textbf{Komfort gegen Kontrolle einzutauschen}?
         \end{itemize}
     \end{itemize}
@@ -102,42 +103,66 @@
 
   \begin{frame}{Meta- und Nutzdaten}
     \begin{itemize}
-      \item Meta-/Verbindungsdaten
+      \item Meta-/Verbindungsdaten (``Briefumschlag'')
       \begin{itemize}
-        \item E-Mail: Wer hat wann an wen mit welcher Betreffzeile eine E-Mail geschickt?
-        \item Surfen: Wer hat wann welche Webseite besucht?
-        \item Mobilfunk: Wer hat wann von wo mit wem kommuniziert?
+        \item Absender, Empfänger, Betreffzeile einer E-Mail
+        \item Besuch und Aufenthaltsdauer auf einer Webseite
+        \item Aufenthaltsort von Mobiltelefonen
       \end{itemize}
-      \item Nutz-/Inhaltsdaten
+      \item Nutz-/Inhaltsdaten (``Brief'')
       \begin{itemize}
-        \item E-Mail: Was waren Inhalt und Anhänge?
-        \item Surfen: Welche Inhalte waren auf der Webseite?
-        \item Mobilfunk: Was wurde geschrieben oder gesprochen?
+        \item E-Mail-Text und -Anhänge
+        \item Webseiten-Inhalte
+        \item Gesprochene Sprache beim Telefonieren
+        \item SMS-Inhalt
       \end{itemize}
+    \end{itemize}
+  
+    Metadaten sind i.d.R. zur Zustellung, Abrechnung etc nötig\\und lassen sich \textbf{nicht} einfach \textbf{``verschlüsseln''}
+  \end{frame}
+
+  \begin{frame}{Verschlüsseln - was hilft das?}
+    Kryptographie verwendet man u.a., um
+    \begin{itemize}
+      \item die \textbf{Vertraulichkeit} sicherzustellen
+      \item sich von der \textbf{Echtheit/Authentizität} des Gegenübers überzeugen zu können(!!)
+    \end{itemize}
+
+    Kleiner Auszug der praktischen Probleme\ldots
+    \begin{itemize}
+      \item Wie vereinbart man einen geheimen Schlüssel?\\(``Feind hört mit!'')
+      \item Wie kann man sicherstellen, dass man auch tatsächlich mit dem gewünschen Partner verschlüsselt kommuniziert (und nicht mit jemand anderem)?
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Kryptographie auf einer Folie}
+  \begin{frame}{Symmetrische Kryptographie}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{images/Orange_blue_symmetric_cryptography_de.pdf}
+    \end{center}
     \begin{itemize}
-      \item Symmetrisch: \textit{ein} \textbf{geheimer} ``Schlüssel'' (= lange Zahl)
-      \begin{itemize}
-        \item braucht einen \textbf{vertraulichen Kanal} zur Vereinbarung eines Schlüssels zwischen zwei Kommunikationspartnern
-        \item Anwendungsfälle
-        \begin{itemize}
-          \item Festplattenverschlüsselung
-          \item Zip-Dateien mit Passwort
-        \end{itemize}
-      \end{itemize}
-      \item Asymmetrisch: ein \textbf{geheimer} \textit{und} ein dazu passender \textbf{öffentlicher} Schlüssel bilden ein \textbf{Schlüsselpaar}
-      \begin{itemize}
-        \item braucht einen \textbf{authentischen}, aber \textit{keinen vertraulichen} Kanal zur sicheren Zuordnung des Schlüssels zu einer Person
-        \item Verwendung
-          \begin{itemize}
-            \item Verschlüsseln mit öffentlichem Schlüssel,\\Entschlüsseln mit geheimem Schlüssel
-            \item \textit{Digitale Signatur} von Daten mit dem privaten Schlüssel\\als Echtheitsbestätigung
-          \end{itemize}
-      \end{itemize}
+      \item Jahrtausende altes Konzept
+      \item \textit{ein} Schlüssel zum Ver- und Entschlüsseln
+      \item wird z.B. bei der Festplattenverschlüsselung verwendet\\(der Schlüssel errechnet sich aus dem Passwort)
+      \item wenn man kommunizieren will: wie \textit{vereinbart} man einen gemeinsamen Schlüssel \textbf{sicher}?
     \end{itemize}
+    \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Symmetrisches_Kryptosystem}
+  \end{frame}
+  
+  \begin{frame}{Asymmetrische Kryptographie}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{images/Orange_blue_public_key_cryptography_de.pdf}
+    \end{center}
+    \begin{itemize}
+      \item Prinzip: Schlüssel besteht aus einer privaten (d.h. geheimen) \textbf{und} einer \textit{öffentlichen} ``Hälfte''
+      \item den öffentlichen Teil darf man offen kommunizieren,\\Vertraulichkeit bleibt gewährleistet
+      \item Weitere Anwendung: \textit{Digitale Signatur}
+        \begin{itemize}
+            \scriptsize
+          \item Daten können mit privatem Schlüssel ``unterschrieben'' werden
+          \item mit dem öffentlichen Schlüssel kann jeder überprüfen, ob die Unterschrift zu den Daten passt -- aber man kann die Unterschrift nicht fälschen
+        \end{itemize}
+    \end{itemize}
+    \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Aymmetrisches_Kryptosystem}
   \end{frame}
 
 \section{Passwörter}
