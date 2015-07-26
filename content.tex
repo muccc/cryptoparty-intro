@@ -121,8 +121,7 @@
     \end{center}
     \begin{itemize}
       \item Jahrtausende altes Konzept
-      \item \textit{ein} Schlüssel zum Ver- und Entschlüsseln
-      \item wird z.B. bei Festplattenverschlüsselung verwendet
+      \item \textit{ein} Schlüssel zum Ver- und Entschlüsseln,\\den \textit{alle} Beteiligten kennen
       \item wenn man kommunizieren will: wie \textit{vereinbart} man einen gemeinsamen Schlüssel \textbf{sicher}?
     \end{itemize}
     \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Symmetrisches_Kryptosystem}
@@ -134,17 +133,29 @@
     \end{center}
     \begin{itemize}
       \item Prinzip: Schlüssel besteht aus einer privaten (d.h. geheimen) \textbf{und} einer \textit{öffentlichen} ``Hälfte''
-      \item den öffentlichen Teil darf man offen kommunizieren,\\Vertraulichkeit bleibt gewährleistet
-      \item Weitere Anwendung: \textit{Digitale Signatur}
-        \begin{itemize}
-            \scriptsize
-          \item Daten können mit privatem Schlüssel ``unterschrieben'' werden
-          \item mit dem öffentlichen Schlüssel kann jeder überprüfen, ob die Unterschrift zu den Daten passt -- aber man kann die Unterschrift nicht fälschen
-        \end{itemize}
+      \item den öffentlichen Teil darf man offen weitergeben,\\Vertraulichkeit bleibt gewährleistet
+      \item weiterhin ungelöstes Problem:\\Authentizität (Echtheit) der öffentlichen Schlüssel-``Hälften''
     \end{itemize}
     \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Asymmetrisches_Kryptosystem}
   \end{frame}
 
+  \begin{frame}{Asymmetrische Kryptografie -- Anwendungen}
+    \begin{itemize}
+      \item Verschlüsselung
+        \begin{itemize}
+          \item jeder Kommunikationspartner\\hat ein \textit{eigenes} Schlüsselpaar\\und veröffentlicht seinen \textbf{öffentlichen} Teil
+          \item der Absender verschlüsselt die Mail\\mit dem öffentlichen Teil des \textit{Gegenübers}
+          \item Praxisbeispiele: E-Mail-Verschlüsselung (PGP, S/MIME), Chat (OTR)
+        \end{itemize}
+      \item Digitale Signatur
+        \begin{itemize}
+          \item Absender A unterschreibt zu ``signierende'' Daten\\mit dem \textit{eigenen} \textbf{privaten} Schlüssel
+          \item mit der Kenntnis des \textbf{öffentlichen} Schlüssels von A kann jeder die Integrität und Authentizität der Daten überprüfen\\
+            -- eine unbemerkte Manipulation der Daten ist nicht möglich
+          \item Praxisbeispiele: Sichere Webseiten (HTTPS), E-Mail-Signatur (PGP, S/MIME), Download sicherheitskritischer Software (PGP)
+        \end{itemize}
+    \end{itemize}
+  \end{frame}
 \section{Passwörter}
   \begin{frame}{Passwörter}
     \Large Wer hat mindestens fünf Online-Accounts? 
@@ -158,8 +169,8 @@
       \small Besonders wichtig bei E-Mail-Accounts, da ``Passwort zurücksetzen''-Funktionen oft per E-Mail funktionieren \normalsize
       \item Besser als überall das gleiche Passwort:\\Passwörter leicht variieren (``salzen'')
       \begin{itemize}
-        \item 1Quastenfl0sser.mai für Mail
-        \item 1Quastenfl0sser.son für Social Network
+        \item \textit{Passwort}.mai für Mail
+        \item \textit{Passwort}.son für Social Network
         \item \ldots
       \end{itemize}
       \item Oder: Passwort-Manager
@@ -238,9 +249,21 @@
         \item ``Autobahnbetreiber'' kann mithören,\\wer mit wem kommuniziert
         \item ``Post'' kann mithören, wer mit wem kommuniziert
       \end{itemize}
-      \item Wir stellen hier Ende-zu-Ende-Verschlüsselung vor.
     \end{itemize}
   \end{frame}
+
+  \begin{frame}{Transportsicherheit}
+    \begin{centering}
+      \Huge Live-Demo
+    \end{centering}
+  \end{frame}
+  
+  \begin{frame}
+    \begin{centering}
+      \Huge Pause
+    \end{centering}
+  \end{frame}
+
 
   \begin{frame}{Überprüfung der Echtheit}
   Was muss A tun, er an B eine Nachricht schicken will, aber nicht seinen öffentlichen Schlüssel kennt?\\
@@ -289,6 +312,6 @@
     \begin{itemize}
       \item{Her damit!}
       \item{Fragen an alle Helfer (bitte gebt Euch zu erkennen :-)}
-      \item{Link: \url{https://muc.pads.ccc.de/cryptoparty}}
+      \item{Links: \url{https://muc.pads.ccc.de/cryptoparty}}
     \end{itemize}
   \end{frame}
