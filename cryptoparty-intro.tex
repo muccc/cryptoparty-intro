@@ -2,65 +2,12 @@
 
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{ae,aecompl}
-\usepackage{ngerman,color,helvet,courier,ifpdf}
-\usepackage{verbatim}
-
-\usepackage{listings}
-\lstloadlanguages{XML, Python}
-\lstset{basicstyle=\small, showstringspaces=false, tabsize=2, stringstyle={\ttfamily}, captionpos=b, breaklines=true, extendedchars=true, belowskip=12pt, backgroundcolor=\color[rgb]{0.9,0.9,0.9}, numbers=left, xleftmargin=1cm}
+\usepackage[ngerman]{babel}
+\usepackage{helvet}
 
 \includeonly{
     metadata,
     content
-}
-
-\usepackage{tikz}
-\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
-    decorations.pathreplacing,decorations.pathmorphing,shapes,%
-    matrix,shapes.symbols}
-\tikzset{
-    %Define standard arrow tip
-    >=stealth',
-    %Define style for boxes
-    punkt/.style={
-           rectangle,
-           rounded corners,
-           draw=black, very thick,
-           text width=6em,
-           minimum height=2em,
-           text centered},
-    % Define arrow style
-    pil/.style={
-           ->,
-           thick,
-           shorten <=2pt,
-           shorten >=2pt,},
-  punktchain/.style={
-    rectangle,
-    rounded corners,
-    % fill=black!10,
-    draw=black, very thick,
-    text width=6em,
-    inner sep=6pt,
-    minimum height=3em,
-    text badly ragged,
-    on chain},
-  line/.style={draw, thick, <-},
-  element/.style={
-    tape,
-    top color=white,
-    bottom color=blue!50!black!60!,
-    minimum width=8em,
-    draw=blue!40!black!90, very thick,
-    text width=10em,
-    minimum height=3.5em,
-    text centered,
-    on chain},
-  every join/.style={->, thick,shorten >=1pt},
-  decoration={brace},
-  tuborg/.style={decorate},
-  tubnode/.style={midway, right=2pt},
 }
 
 \usetheme{Warsaw}
