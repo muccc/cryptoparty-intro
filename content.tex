@@ -121,8 +121,13 @@
     \end{center}
     \begin{itemize}
       \item Jahrtausende altes Konzept
-      \item \textit{ein} Schlüssel zum Ver- und Entschlüsseln,\\den \textit{alle} Beteiligten kennen
-      \item wenn man kommunizieren will: wie \textit{vereinbart} man einen gemeinsamen Schlüssel \textbf{sicher}?
+      \item \emph{Ein} Schlüssel zum Ver- und Entschlüsseln,\\den \emph{alle} Beteiligten kennen
+      \item Problem: Schlüsselaustausch
+      \begin{itemize}
+        \item Wer den Schlüssel kennt, kommt auch an die Daten
+        \item Wer den Schlüssel manipuliert, kontrolliert die Daten
+      \end{itemize}
+      \item Wird überall verwendet, um Inhalte zu verschlüsseln
     \end{itemize}
     \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Symmetrisches_Kryptosystem}
   \end{frame}
@@ -132,9 +137,13 @@
       \includegraphics[width=0.5\textwidth]{images/Orange_blue_public_key_cryptography_de.pdf}
     \end{center}
     \begin{itemize}
-      \item Prinzip: Schlüssel besteht aus einer privaten (d.h. geheimen) \textbf{und} einer \textit{öffentlichen} ``Hälfte''
-      \item den öffentlichen Teil darf man offen weitergeben,\\Vertraulichkeit bleibt gewährleistet
-      \item weiterhin ungelöstes Problem:\\Authentizität (Echtheit) der öffentlichen Schlüssel-``Hälften''
+      \item Prinzip: Schlüssel besteht aus einer \emph{privaten} und einer \emph{öffentlichen} ,,Hälfte``
+      \begin{itemize}
+        \item Öffentlichen Teil darf/muss man weitergeben
+        \item Privaten Teil muss man unbedingt geheim halten
+      \end{itemize}
+      \item Wird verwendet, um vertraulichen Kanal aufzubauen
+      \item Problem weiterhin: Authentizität des öffentlichen Teils
     \end{itemize}
     \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Asymmetrisches_Kryptosystem}
   \end{frame}
@@ -143,19 +152,17 @@
     \begin{itemize}
       \item Verschlüsselung
         \begin{itemize}
-          \item jeder Kommunikationspartner\\hat ein \textit{eigenes} Schlüsselpaar\\und veröffentlicht seinen \textbf{öffentlichen} Teil
-          \item der Absender verschlüsselt die Mail\\mit dem öffentlichen Teil des \textit{Gegenübers}
-          \item Praxisbeispiele: E-Mail-Verschlüsselung (PGP, S/MIME), Chat (OTR)
+          \item Absender \emph{verschlüsselt}\\ mit \emph{öffentlichem} Teil des \emph{Gegenübers}
+          \item Nur Gegenüber\\ kann mit \emph{privatem} Gegenstück \emph{entschlüsseln}
         \end{itemize}
       \item Digitale Signatur
         \begin{itemize}
-          \item Absender A unterschreibt zu ``signierende'' Daten\\mit dem \textit{eigenen} \textbf{privaten} Schlüssel
-          \item mit der Kenntnis des \textbf{öffentlichen} Schlüssels von A kann jeder die Integrität und Authentizität der Daten überprüfen\\
-            -- eine unbemerkte Manipulation der Daten ist nicht möglich
-          \item Praxisbeispiele: Sichere Webseiten (HTTPS), E-Mail-Signatur (PGP, S/MIME), Download sicherheitskritischer Software (PGP)
+          \item Absender unterschreibt mit \emph{eigenem privaten} Teil
+          \item Jeder kann mit \emph{öffentlichem} Gegenstück \emph{überprüfen}
         \end{itemize}
     \end{itemize}
   \end{frame}
+
 \section{Passwörter}
   \begin{frame}{Passwörter}
     \Large Wer hat mindestens fünf Online-Accounts? 
