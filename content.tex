@@ -336,52 +336,43 @@
     \end{itemize}
     werden. Deshalb stellen wir vor, wie man
     \begin{itemize}
-      \item die Vertraulichkeit (das ``Briefgeheimnis'') umsetzt
+      \item die Vertraulichkeit (das ,,Briefgeheimnis``) umsetzt
       \\ $\Rightarrow$ Verschlüsselung
       \item die Echtheit des Gegenübers sicherstellt
       \\ $\Rightarrow$ Digitale Signatur
+    \end{itemize}
+    Außerdem:
+    \begin{itemize}
+      \item Wie man sicherstellt, dass sein E-Mail Passwort\\ nicht einfach mitgelesen werden kann
     \end{itemize}
   \end{frame}
 
   \begin{frame}{Analogie zur Vertraulichkeit von E-Mails}
     \begin{itemize}
-      \item E-Mails sind ``Postkarten''
-      \item diese werden in ``gläsernen Fahrzeugen'' transportiert
+      \item E-Mails sind ,,Postkarten``
+      \item Transportiert in ,,gläsernen Fahrzeugen``
       \begin{itemize}
-        \item ``Autobahnbetreiber'' kann alles mithören
-        \item ``Post'' kann alles mithören
+        \item ,,Autobahnbetreiber`` kann alles mithören
+        \item ,,Post`` kann alles mithören
       \end{itemize}
-      \item Bei \textbf{Transportverschlüsselung} ersetzt die ``Post'' die ``gläsernen Fahrzeuge'' durch ``undurchsichtige Fahrzeuge''
+      \item Bei \emph{Transportverschlüsselung} ersetzt die ,,Post``\\ ,,gläserne Fahrzeuge`` durch ,,blickdichte Fahrzeuge``
       \begin{itemize}
-        \item ``Autobahnbetreiber'' kann mithören,\\welche ``Post'' mit welcher anderen ``Post'' kommuniziert
-        \item ``Post'' kann alles mithören
+        \item ,,Autobahnbetreiber`` kann mithören,\\ wann welche ,,Post`` mit welcher ,,Post`` redet\\ aber nicht Passwort, Empfänger, Betreff, etc.
+        \item ,,Post`` kann alles mithören
       \end{itemize}
-      \item Bei \textbf{Ende-zu-Ende-Verschlüsselung} steckt der Absender die ``Postkarte'' in einen ``Briefumschlag''
+      \item Bei \emph{Ende-zu-Ende-Verschlüsselung} steckt der Absender die ,,Postkarte`` in einen ,,Briefumschlag``
       \begin{itemize}
-        \item ``Autobahnbetreiber'' kann mithören,\\wer mit wem kommuniziert
-        \item ``Post'' kann mithören, wer mit wem kommuniziert
+        \item ,,Autobahnbetreiber`` und ,,Post`` können mithören,\\ wann wer mit wem wie viel kommuniziert\\ aber nicht den Inhalt!
       \end{itemize}
+      \item Unbedingt beides kombinieren!
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Transportsicherheit}
-    \begin{centering}
-      \Huge Live-Demo
-    \end{centering}
-  \end{frame}
-  
-  \begin{frame}
-    \begin{centering}
-      \Huge Pause
-    \end{centering}
-  \end{frame}
-
-
   \begin{frame}{Überprüfung der Echtheit}
-  Was muss A tun, er an B eine Nachricht schicken will, aber nicht seinen öffentlichen Schlüssel kennt?\\
+  Was, wenn A eine Nachricht an B schicken will,\\ aber den öffentlichen Schlüssel von B nicht kennt?\\
   \begin{enumerate}
     \item Im ``Telefonbuch'' nach dem Schlüssel suchen
-    \item Echtheit mit Hilfe eines \textbf{vertrauenswürdigen Dritten} C\\überprüfen
+    \item Echtheit mit Hilfe eines \emph{vertrauenswürdigen Dritten} C überprüfen
   \end{enumerate}
   \begin{center}
     \includegraphics[width=0.5\textheight]{images/vertrauen.pdf}
@@ -392,31 +383,25 @@
     \begin{itemize}
       \item S/MIME -- Hierarchischer Vertrauensansatz
       \begin{itemize}
-        \item Es gibt ``zentrale Vertrauensinstanzen'' (Certification Authorities, CAs), denen \textbf{jeder} vertraut
-        \item Diese bestätigen die Echtheit der Schlüssel von  \textit{untergeordneten} CAs
-        \item \ldots eine (beliebige) CA aus der Vertrauenskette kann die Echtheit von Schlüsseln von Personen bestätigen
-        \item wird hier \textit{nicht} behandelt
+        \item Es gibt ,,zentrale Vertrauensinstanzen`` (Certification Authorities, CAs), denen \emph{jeder} vertraut
+        \item Diese bestätigen die Echtheit der Schlüssel\\ von untergeordneten CAs
+        \item Eine beliebige CA aus der Vertrauenskette\\ kann einer Person einen Schlüssel zuordnen
+        \item wird hier \emph{nicht} behandelt
       \end{itemize}
       \item GnuPG -- Dezentraler Vertrauensansatz
       \begin{itemize}
         \item jeder kann festlegen, wem er vertraut
         \begin{itemize}
-          \item er kann die Echtheit eines Schlüssels z.B. bei einem persönlichen Treffen überprüfen
+          \item er kann die Echtheit eines Schlüssels\\ z.B. bei einem persönlichen Treffen überprüfen
         \end{itemize}
-        \item jeder \textit{kann} sein Vertrauensnetz veröffentlichen (Web-of-Trust)
+        \item jeder \emph{kann} sein Vertrauensnetz veröffentlichen (Web-of-Trust)
         \begin{itemize}
-          \item Vorteil: Man kann auch ``Freunden von Freunden'' vertrauen
-          \item Nachteil: Beziehungen zwischen Menschen sind öffentlich 
+          \item Vorteil: Man kann ``Freunden von Freunden'' vertrauen
+          \item Nachteil: Beziehungen zwischen Menschen öffentlich\\ Aber: Facebook sagt da viel mehr aus
         \end{itemize}
         \item wird hier behandelt
       \end{itemize}
     \end{itemize}
-  \end{frame}
-
-  \begin{frame}{E-Mail-Absicherung mit GnuPG}
-    \begin{centering}
-      \Huge Live-Demo
-    \end{centering}
   \end{frame}
 
 \section{Fragen, Feedback}
@@ -427,3 +412,4 @@
       \item{Links: \url{https://muc.pads.ccc.de/cryptoparty}}
     \end{itemize}
   \end{frame}
+
