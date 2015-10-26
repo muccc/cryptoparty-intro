@@ -165,42 +165,79 @@
 
 \section{Passwörter}
   \begin{frame}{Passwörter}
-    \Large Wer hat mindestens fünf Online-Accounts? 
+    Wer hat mindestens fünf Online-Accounts?
+
+    \visible<2->{Wer hat dafür mindestens drei verschiedene Passwörter?}
   \end{frame}
-  \begin{frame}{Passwörter}
-    \Large Und wer hat dafür mindestens drei verschiedene Passwörter?
-  \end{frame}
-  \begin{frame}{Sichere Passwörter?}
+
+  \begin{frame}{Anzahl Passwörter}
     \begin{itemize}
-      \item Ideal: Jedes Passwort nur einmal verwenden\\
-      \small Besonders wichtig bei E-Mail-Accounts, da ``Passwort zurücksetzen''-Funktionen oft per E-Mail funktionieren \normalsize
-      \item Besser als überall das gleiche Passwort:\\Passwörter leicht variieren (``salzen'')
+      \item Kundendaten gehen häufig verloren
       \begin{itemize}
-        \item \textit{Passwort}.mai für Mail
-        \item \textit{Passwort}.son für Social Network
-        \item \ldots
+        \item Schaden lässt sich begrenzen, wenn Benutzername und Passwort nur bei diesem einen Anbieter passen
       \end{itemize}
-      \item Oder: Passwort-Manager
+      \item Besonder wichtig: E-Mail Accounts
+      \begin{itemize}
+        \item Weil ,,Passwort zurücksetzen`` oft via E-Mail
+        \item Wer den E-Mail Account übernommen hat,\\ kann dadurch sämtliche Accounts übernehmen
+      \end{itemize}
+      \item Ideal: Jedes Passwort nur einmal verwenden
+      \item Alternative: Passwörter ,,salzen``
+      \begin{itemize}
+        \item \textit{passwort}.amz für Onlineshop a
+        \item \textit{passwort}.zal für Onlineshop z
+        \item \textit{anderespasswort} für Mails
+      \end{itemize}
     \end{itemize}
   \end{frame}
+
+  \begin{frame}{Sichere Passwörter}
+    \begin{block}{Anforderungen}
+    \begin{itemize}
+      \item Klein- und Großbuchstaben, Zahlen,\\ begrenzt: Sonderzeichen
+      \item Wichtiger: Lang genug!
+    \end{itemize}
+    \end{block}
+    \begin{block}{Merkbarkeit}
+    \begin{itemize}
+      \item Geschichte dazu ausdenken
+      \item Melodie und Rhythmus rein bringen
+      \begin{itemize}
+        \item Gehirn kann sich Melodien besonders leicht merken
+        \item Ermöglicht schnelles eintippen
+        \begin{itemize}
+          \item Längere Passwörter weniger nervig
+          \item Schwieriger, das Passwort mitzulesen
+        \end{itemize}
+      \end{itemize}
+    \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}{Passwort Länge vs. Zeichensatz}
+    \begin{center}
+      \includegraphics[width=0.99\textheight]{images/password_strength.png}\\
+    \end{center}
+    \tiny Quelle: \url{http://xkcd.com/936/}
+  \end{frame}
+
   \begin{frame}{Passwort-Manager}
     \begin{itemize}
       \item Software zur Verwaltung von Passwörtern
-      \item Datenbank wird mit einem Master-Passwort verschlüsselt
+      \item Kann automatisch komplexe Passwörter erzeugen
+      \item Datenbank wird mit Master-Passwort verschlüsselt
+      \begin{itemize}
+        \item Anzahl der zu merkenden Passwörter geringer
+      \end{itemize}
       \item Beispiel: KeePassX (Open Source)
     \end{itemize}
       \includegraphics[width=\textwidth]{images/keepassx.png}
     \begin{itemize}
-      \item \textbf{Wichtige Passwörter trotzdem merken!}
-      \item \ldots oder zumindest auf einem Zettel aufschreiben und zuhause an einem sicheren Ort lagern
+      \item \emph{Wichtige Passwörter trotzdem merken!}
+      \item \ldots oder zumindest auf einem Zettel aufschreiben\\ und zuhause an einem sicheren Ort lagern
     \end{itemize}
   \end{frame}
-  \begin{frame}{Aber wie soll man sich Passwörter merken?}
-    \begin{center}
-      \includegraphics[width=0.9\textheight]{images/password_strength.png}\\
-    \end{center}
-    \tiny Quelle: \url{http://xkcd.com/936/}
-  \end{frame}
+
 \section{Web-Surfen}
   \begin{frame}{Anonymes Werbsurfen}
     \begin{itemize}
