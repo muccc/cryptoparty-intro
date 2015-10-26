@@ -240,22 +240,87 @@
   \end{frame}
 
 \section{Web-Surfen}
-  \begin{frame}{Anonymes Werbsurfen}
+  \begin{frame}{Problem: Trackbarkeit}
     \begin{itemize}
-      \item Anfallende Meta-Daten
+      \item Cookies und Co (HTML5 Persistent Local Storage, Flashcookies, \ldots)
+      \item Browser-Fingerabdruck
+      \item IP-Adresse
+    \end{itemize}
+    Nicht nur die NSA, auch jede Website\\ und jeder Werbeanbieter kann einen (wieder-)erkennen
+
+    \begin{block}{Tools zur Aufklärung}
+    \begin{itemize}
+      \item \href{https://panopticlick.eff.org/}{EFF: Panopticlick}
+      \item \href{http://datenblumen.wired.de/}{Wired: Datenblumen}
+    \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}{Schutzmaßnahmen -- Level 1}
+  \framesubtitle{Nur Einstellungen ändern}
+    \begin{itemize}
+      \item Standardsuchmaschine\\ auf datenschutzfreundliche Anbieter ändern, z.B.
       \begin{itemize}
-        \item Cookies und Co (HTML5 Persistent Local Storage, Flashcookies, \ldots)
-        \item Browser-Fingerabdruck
-        \item IP-Adresse
+        \item DuckDuckGo
+        \item Startpage
+        \item ixquick
       \end{itemize}
-      \item Wie kann man trotzdem anonym\textit{er} surfen?
+      \item Cookies verbieten, nur selektiv erlauben
       \begin{itemize}
-        \item \textbf{Einfach}: Tor Browser Bundle (Open Source)\\ \url{https://www.torproject.org}\\[.5cm]
-        \item \textbf{Ohne Spuren am PC}: Tails (Open Source)\\ \url{https://tails.boum.org}\\[.5cm]
-        \item Alternative: Browser-Plugins
-          \begin{itemize}
-            \item NoScript, ClickToPlugin, AdBlockPlus, Ghostery (Achtung: Closed Source), \ldots 
-          \end{itemize}
+        \item Firefox: about:preferences
+      \end{itemize}
+      \item Add-Ons auf ,,Click-to-use`` stellen
+      \begin{itemize}
+        \item Firefox: about:addons
+      \end{itemize}
+    \end{itemize}
+
+    Eventuell:
+    \begin{itemize}
+      \item Blockierung von ,,bösen`` Webseiten abschalten
+      \item Statusberichte des Browsers abschalten
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Schutzmaßnahmen -- Level 2}
+  \framesubtitle{Plug-Ins installieren}
+    \begin{itemize}
+      \item Adblocker --\\ Schadsoftware immer öfter über Werbeanzeigen!
+      \begin{itemize}
+        \item Adblock Edge = Adblock Plus ohne ,,acceptable Ads``
+      \end{itemize}
+      \item NoScript
+      \begin{itemize}
+        \item Erlaubt gezieltes ein-/ausschalten von Java, JavaScript etc.
+      \end{itemize}
+      \item EFF: HTTPS-Everywhere
+      \begin{itemize}
+        \item Nutzt automatisch HTTPS, falls von Seite unterstützt
+        \item Benutzt lokale Liste der Seiten, keine Online-Abfrage
+      \end{itemize}
+      \item RefControl
+      \begin{itemize}
+        \item HTTP-Referrer = von welcher Seite komme ich
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Schutzmaßnahmen -- Level 3}
+  \framesubtitle{Neue Programme installieren oder benutzen}
+    \begin{itemize}
+      \item \href{https://www.torproject.org}{TOR Browser Bundle (Open Source)}
+      \begin{itemize}
+        \item Mehrere Verschlüsselungsschichten,\\ wie in einer Zwiebel (TOR = The Onion Router)
+        \item Datenstrom fließt über mehrere ,,Bridges``,\\ jede kennt nur den Schlüssel für ihre Schicht
+        \item Fingerabdruck bei allen TOR Browsern identisch
+        \item Hohe Sicherheit, aber Prinzip bedingt langsamer
+      \end{itemize}
+      \item \href{https://tails.boum.org}{Tails (OpenSource)}
+      \begin{itemize}
+        \item Abgesichertes Betriebssystem inkl. TOR
+        \item Schützt vor Schadsoftware,\\ die aus dem Browser ausbricht
+        \item Live System = kann direkt von CD gebootet werden\\ hinterlässt keinerlei Spuren am PC
+        \item Sieht auf Wunsch nach Windows aus
       \end{itemize}
     \end{itemize}
   \end{frame}
