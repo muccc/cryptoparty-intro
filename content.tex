@@ -3,7 +3,6 @@
     \begin{itemize}
       \item Chaos Computer Club München e.V.
       \item Forum InformatikerInnen für Frieden\\und gesellschaftliche Verantwortung e.V.
-      \item Medienzentrum München (MZM)\\Institut für Medienpädagogik in Forschung und Praxis\\JFF -- Jugend Film Fernsehen e.V.
     \end{itemize}
   \end{frame}
   \begin{frame}{Die Cryptoparty}
@@ -85,11 +84,12 @@
         \end{itemize}
       \end{itemize}
       \item In der Cloud
+        %TODO: FSF there is no cloud
         \begin{itemize}
           \item \emph{Wer} betreibt einen Dienst?
           \item Womit \emph{verdient} der Betreiber sein \emph{Geld}?
-          \item Wem könnten die Daten \emph{Nutzen} oder \emph{Schaden}?
-          \item \emph{Welche zusätzliche Daten} fallen beim Betreiber an?
+          \item Wem könnten die Daten \emph{nutzen} oder \emph{schaden}?
+          \item Was \emph{lernt} der Betreiber über mich?
         \end{itemize}
     \end{itemize}
   \end{frame}
@@ -125,11 +125,10 @@
       \item Problem: Schlüsselaustausch
       \begin{itemize}
         \item Wer den Schlüssel kennt, kommt auch an die Daten
-        \item Wer den Schlüssel manipuliert, kontrolliert die Daten
+        \item Wer den Schlüssel kontrolliert, kontrolliert die Daten
       \end{itemize}
-      \item Wird überall verwendet, um Inhalte zu verschlüsseln
     \end{itemize}
-    \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Symmetrisches_Kryptosystem}
+    \tiny Bildquelle: \href{https://de.wikipedia.org/wiki/Datei:Orange_blue_symmetric_cryptography_de.svg}{,,Symmetrisches Kryptosystem'' von Bananenfalter / CC0}
   \end{frame}
   
   \begin{frame}{Asymmetrische Kryptographie}
@@ -145,7 +144,7 @@
       \item Wird verwendet, um vertraulichen Kanal aufzubauen
       \item Problem weiterhin: Authentizität des öffentlichen Teils
     \end{itemize}
-    \tiny Bildquelle: \url{https://de.wikipedia.org/wiki/Asymmetrisches_Kryptosystem}
+    \tiny Bildquelle: \href{https://commons.wikimedia.org/wiki/File:Orange_blue_public_key_cryptography_de.svg}{,,Asymmetrisches Kryptosystem mit Verschlüsselung und Entschlüsselung'' von Bananenfalter / CC0}
   \end{frame}
 
   \begin{frame}{Asymmetrische Kryptografie -- Anwendungen}
@@ -179,10 +178,10 @@
       \begin{itemize}
         \item Schaden lässt sich begrenzen, wenn Benutzername und Passwort nur bei diesem einen Anbieter passen
       \end{itemize}
-      \item Besonder wichtig: E-Mail Accounts
+      \item Besonder wichtig: E-Mail-Accounts
       \begin{itemize}
         \item Weil ,,Passwort zurücksetzen`` oft via E-Mail
-        \item Wer den E-Mail Account übernommen hat,\\ kann dadurch sämtliche Accounts übernehmen
+        \item Wer den E-Mail Account-übernommen hat,\\ kann dadurch sämtliche Accounts übernehmen
       \end{itemize}
       \item Ideal: Jedes Passwort nur einmal verwenden
       \item Alternative: Passwörter ,,salzen``
@@ -207,7 +206,7 @@
       \item Melodie und Rhythmus rein bringen
       \begin{itemize}
         \item Gehirn kann sich Melodien besonders leicht merken
-        \item Ermöglicht schnelles eintippen
+        \item Ermöglicht schnelles Eintippen
         \begin{itemize}
           \item Längere Passwörter sind weniger nervig
           \item Passwort mitlesen ist schwieriger
@@ -221,7 +220,7 @@
     \begin{center}
       \includegraphics[width=0.99\textheight]{images/password_strength.png}\\
     \end{center}
-    \tiny Quelle: \url{http://xkcd.com/936/}
+    \tiny Bildquelle: \href{http://xkcd.com/936/}{xkcd: Password Strength / CC BY-NC 2.5}
   \end{frame}
 
   \begin{frame}{Passwort-Manager}
@@ -242,13 +241,13 @@
   \end{frame}
 
 \section{Web-Surfen}
-  \begin{frame}{Problem: Trackbarkeit}
+  \begin{frame}{Tracking}
     \begin{itemize}
       \item Cookies und Co (HTML5 Persistent Local Storage, Flashcookies, \ldots)
       \item Browser-Fingerabdruck
       \item IP-Adresse
     \end{itemize}
-    Nicht nur die NSA, auch jede Website\\ und jeder Werbeanbieter kann einen (wieder-)erkennen
+    Jede Website und jedes Werbenetzwerk\\kann Personen und Computer (wieder-)erkennen
 
     \begin{block}{Tools zur Aufklärung}
     \begin{itemize}
@@ -271,7 +270,7 @@
       \begin{itemize}
         \item Firefox: about:preferences
       \end{itemize}
-      \item Add-Ons auf ,,Click-to-use`` stellen
+      \item Plugins auf ,,Click-to-use`` stellen
       \begin{itemize}
         \item Firefox: about:addons
       \end{itemize}
@@ -290,6 +289,7 @@
       \item Adblocker --\\ Schadsoftware immer öfter über Werbeanzeigen!
       \begin{itemize}
         \item Adblock Edge = Adblock Plus ohne ,,acceptable Ads``
+        %\item TODO: RequestPolicy
       \end{itemize}
       \item NoScript
       \begin{itemize}
@@ -310,16 +310,15 @@
   \begin{frame}{Schutzmaßnahmen -- Level 3}
   \framesubtitle{Neue Programme installieren oder benutzen}
     \begin{itemize}
-      \item \href{https://www.torproject.org}{TOR Browser Bundle (Open Source)}
+      \item \href{https://www.torproject.org}{Tor Browser Bundle (Freie Software)}
       \begin{itemize}
-        \item Mehrere Verschlüsselungsschichten,\\ wie in einer Zwiebel (TOR = The Onion Router)
-        \item Datenstrom fließt über mehrere ,,Bridges``,\\ jede kennt nur den Schlüssel für ihre Schicht
-        \item Fingerabdruck bei allen TOR Browsern identisch
-        \item Hohe Sicherheit, aber Prinzip bedingt langsamer
+        \item Anonymisierung des Netzwerkverkehrs\\durch ,,intelligente Umwege''
+        \item Fingerabdruck bei allen Tor Browsern identisch
+        \item Hohe Sicherheit, aber prinzipbedingt langsamer
       \end{itemize}
-      \item \href{https://tails.boum.org}{Tails (OpenSource)}
+      \item \href{https://tails.boum.org}{Tails (Freie Software)}
       \begin{itemize}
-        \item Abgesichertes Betriebssystem inkl. TOR
+        \item Abgesichertes Betriebssystem inkl. Tor
         \item Schützt vor Schadsoftware,\\ die aus dem Browser ausbricht
         \item Live System = kann direkt von CD gebootet werden\\ hinterlässt keinerlei Spuren am PC
         \item Sieht auf Wunsch nach Windows aus
@@ -347,26 +346,58 @@
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Analogie zur Vertraulichkeit von E-Mails}
+  \begin{frame}{E-Mail}{Funktionsweise}
+    \includegraphics[width=\textwidth]{images/maildaten.pdf}
+    \scriptsize
+    ~\\
+    ~\\
+  \end{frame}
+
+  \begin{frame}{E-Mail}{Transportverschlüsselung}
+    \includegraphics[width=\textwidth]{images/maildaten_trans.pdf}
     \begin{itemize}
-      \item E-Mails sind ,,Postkarten``
-      \item Transportiert in ,,gläsernen Fahrzeugen``
-      \begin{itemize}
-        \item ,,Autobahnbetreiber`` kann alles mithören
-        \item ,,Post`` kann alles mithören
-      \end{itemize}
-      \item Bei \emph{Transportverschlüsselung} ersetzt die ,,Post``\\ ,,gläserne Fahrzeuge`` durch ,,blickdichte Fahrzeuge``
-      \begin{itemize}
-        \item ,,Autobahnbetreiber`` kann mithören,\\ wann welche ,,Post`` mit welcher ,,Post`` redet\\ aber nicht Passwort, Empfänger, Betreff, etc.
-        \item ,,Post`` kann alles mithören
-      \end{itemize}
-      \item Bei \emph{Ende-zu-Ende-Verschlüsselung} steckt der Absender die ,,Postkarte`` in einen ,,Briefumschlag``
-      \begin{itemize}
-        \item ,,Autobahnbetreiber`` und ,,Post`` können mithören,\\ wann wer mit wem wie viel kommuniziert\\ aber nicht den Inhalt!
-      \end{itemize}
-      \item Unbedingt beides kombinieren!
+      \scriptsize
+      \item muss von den Mailanbietern unterstützt werden
+      \item Konfiguration des Mailprogramms überprüfen!
     \end{itemize}
   \end{frame}
+
+  \begin{frame}{E-Mail}{Ende-zu-Ende-Verschlüsselung}
+    \includegraphics[width=\textwidth]{images/maildaten_e2e.pdf}
+    \begin{itemize}
+      \scriptsize
+      \item unabhängig vom Mailanbieter möglich
+      \item verhindert Mitlesen von Mail-\textbf{Nutzdaten}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{E-Mail}{Kombination}
+    \includegraphics[width=\textwidth]{images/maildaten_beides.pdf}
+    \scriptsize
+    ~\\
+    ~\\
+  \end{frame}
+  %\begin{frame}{Analogie zur Vertraulichkeit von E-Mails}
+  %  \begin{itemize}
+  %    %TODO: überarbeiten
+  %    \item E-Mails sind ,,Postkarten``
+  %    \item Transportiert in ,,gläsernen Fahrzeugen``
+  %    \begin{itemize}
+  %      \item ,,Autobahnbetreiber`` kann alles mithören
+  %      \item ,,Post`` kann alles mithören
+  %    \end{itemize}
+  %    \item Bei \emph{Transportverschlüsselung} ersetzt die ,,Post``\\ ,,gläserne Fahrzeuge`` durch ,,blickdichte Fahrzeuge``
+  %    \begin{itemize}
+  %      \item ,,Autobahnbetreiber`` kann mithören,\\ wann welche ,,Post`` mit welcher ,,Post`` redet\\ aber nicht Passwort, Empfänger, Betreff, etc.
+  %      \item ,,Post`` kann alles mithören
+  %    \end{itemize}
+  %    \item Bei \emph{Ende-zu-Ende-Verschlüsselung} steckt der Absender die ,,Postkarte`` in einen ,,Briefumschlag``
+  %    \begin{itemize}
+  %      \item ,,Autobahnbetreiber`` und ,,Post`` können mithören,\\ wann wer mit wem wie viel kommuniziert\\ aber nicht den Inhalt!
+  %    \end{itemize}
+  %    \item Unbedingt beides kombinieren!
+  %  \end{itemize}
+  %\end{frame}
 
   \begin{frame}{Überprüfung der Echtheit}
   Was, wenn A eine Nachricht an B schicken will,\\ aber den öffentlichen Schlüssel von B nicht kennt?\\
@@ -376,6 +407,7 @@
   \end{enumerate}
   \begin{center}
     \includegraphics[width=0.5\textheight]{images/vertrauen.pdf}
+    %TODO: überarbeiten
   \end{center}
   \end{frame}
 
@@ -383,10 +415,7 @@
     \begin{itemize}
       \item S/MIME -- Hierarchischer Vertrauensansatz
       \begin{itemize}
-        \item Es gibt ,,zentrale Vertrauensinstanzen`` (Certification Authorities, CAs), denen \emph{jeder} vertraut
-        \item Diese bestätigen die Echtheit der Schlüssel\\ von untergeordneten CAs
-        \item Eine beliebige CA aus der Vertrauenskette\\ kann einer Person einen Schlüssel zuordnen
-        \item wird hier \emph{nicht} behandelt
+        \item hier nicht behandelt
       \end{itemize}
       \item GnuPG -- Dezentraler Vertrauensansatz
       \begin{itemize}
@@ -399,7 +428,7 @@
           \item Vorteil: Man kann ``Freunden von Freunden'' vertrauen
           \item Nachteil: Beziehungen zwischen Menschen öffentlich\\ Aber: Facebook sagt da viel mehr aus
         \end{itemize}
-        \item wird hier behandelt
+        %\item wird hier behandelt
       \end{itemize}
     \end{itemize}
   \end{frame}
