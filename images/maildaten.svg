@@ -147,9 +147,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="29.406721"
-     inkscape:cy="121.29489"
+     inkscape:zoom="5.6"
+     inkscape:cx="284.25235"
+     inkscape:cy="236.2555"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -223,12 +223,12 @@
          id="tspan4146"
          x="60.236221"
          y="187.79527"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Von: Alois@Provider1.de</tspan><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">Von: Alice@Provider1.de</tspan><tspan
          sodipodi:role="line"
          x="60.236221"
          y="195.60777"
          id="tspan4152"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">An: Babs@Provider2.com</tspan><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">An: Bob@Provider2.com</tspan><tspan
          sodipodi:role="line"
          x="60.236221"
          y="203.42027"
@@ -303,7 +303,7 @@
          sodipodi:role="line"
          id="tspan4176"
          x="56.692913"
-         y="141.73227">Alois</tspan></text>
+         y="141.73227">Alice</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -441,7 +441,7 @@
          sodipodi:role="line"
          id="tspan4180-0-7"
          x="368.50394"
-         y="141.73227">Babs</tspan></text>
+         y="141.73227">Bob</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
