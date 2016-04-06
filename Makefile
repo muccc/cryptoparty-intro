@@ -1,5 +1,5 @@
 docs	= cryptoparty-intro
-tex_ext	= pdf aux log toc nav snm
+tex_ext	= pdf aux log toc nav snm out
 
 TEX_FLAGS	= -interaction=nonstopmode
 
