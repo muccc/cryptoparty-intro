@@ -25,7 +25,7 @@
   ~\\
 \end{frame}
 
-\begin{frame}{E-Mail}{Transportverschlüsselung}
+\begin{frame}{E-Mail}{Transportverschlüsselung (SSL/TLS bzw. STARTTLS)}
   \includegraphics[width=.9\textwidth]{images/maildaten_trans.pdf}
   \begin{itemize}
     \scriptsize
@@ -34,44 +34,23 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{E-Mail}{Ende-zu-Ende-Verschlüsselung}
+\begin{frame}{E-Mail}{Ende-zu-Ende-Verschlüsselung (OpenPGP, S/MIME)}
   \includegraphics[width=.9\textwidth]{images/maildaten_e2e.pdf}
   \begin{itemize}
     \scriptsize
     \item unabhängig vom Mailanbieter möglich
-    \item verhindert Mitlesen von Mail-\textbf{Nutzdaten}
+    \item benötigt Zusatzsoftware und Schlüssel bei beiden Kommunikationspartnern
   \end{itemize}
 \end{frame}
 
-\begin{frame}{E-Mail}{Kombination}
+\begin{frame}{E-Mail}{Kombination Transport- und Ende-zu-Ende-Verschlüsselung}
   \includegraphics[width=.9\textwidth]{images/maildaten_beides.pdf}
   \scriptsize
   ~\\
   ~\\
 \end{frame}
-%\begin{frame}{Analogie zur Vertraulichkeit von E-Mails}
-%  \begin{itemize}
-%    %TODO: überarbeiten
-%    \item E-Mails sind ,,Postkarten``
-%    \item Transportiert in ,,gläsernen Fahrzeugen``
-%    \begin{itemize}
-%      \item ,,Autobahnbetreiber`` kann alles mithören
-%      \item ,,Post`` kann alles mithören
-%    \end{itemize}
-%    \item Bei \emph{Transportverschlüsselung} ersetzt die ,,Post``\\ ,,gläserne Fahrzeuge`` durch ,,blickdichte Fahrzeuge``
-%    \begin{itemize}
-%      \item ,,Autobahnbetreiber`` kann mithören,\\ wann welche ,,Post`` mit welcher ,,Post`` redet\\ aber nicht Passwort, Empfänger, Betreff, etc.
-%      \item ,,Post`` kann alles mithören
-%    \end{itemize}
-%    \item Bei \emph{Ende-zu-Ende-Verschlüsselung} steckt der Absender die ,,Postkarte`` in einen ,,Briefumschlag``
-%    \begin{itemize}
-%      \item ,,Autobahnbetreiber`` und ,,Post`` können mithören,\\ wann wer mit wem wie viel kommuniziert\\ aber nicht den Inhalt!
-%    \end{itemize}
-%    \item Unbedingt beides kombinieren!
-%  \end{itemize}
-%\end{frame}
 
-\begin{frame}{Überprüfung der Echtheit}
+\begin{frame}{Authentizität öffentlicher Schlüssel}
 Was, wenn A eine Nachricht an B schicken will,\\ aber den öffentlichen Schlüssel von B nicht kennt?\\
 \begin{enumerate}
   \item Im ``Telefonbuch'' nach dem Schlüssel suchen
@@ -83,13 +62,13 @@ Was, wenn A eine Nachricht an B schicken will,\\ aber den öffentlichen Schlüss
 \end{center}
 \end{frame}
 
-\begin{frame}{Wie stellt man Vertrauen her?}
+\begin{frame}{Wie stellt man Vertrauen in öffentliche Schlüssel her?}
   \begin{itemize}
     \item S/MIME -- Hierarchischer Vertrauensansatz
     \begin{itemize}
       \item hier nicht behandelt
     \end{itemize}
-    \item GnuPG -- Dezentraler Vertrauensansatz
+    \item OpenPGP -- Dezentraler Vertrauensansatz
     \begin{itemize}
       \item jeder kann festlegen, wem er vertraut
       \begin{itemize}
