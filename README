@@ -7,7 +7,7 @@ content.tex:  the slides come here!
 BRAINDUMP:    you might use this to collect ideas...
 
 ---
-Makefile:     rules for making the pdf - just enter 'make' in your terminal and this will do the work for you
+Makefile:     rules for making the pdf - enter 'make <someFlavour>' followed by 'make' in your terminal and this will do the work for you; if it does not, run 'pdflatex cryptoparty-intro.pdf' once, after that 'make' should work
 .gitignore:   Filetypes that are ignored by git
 hyperref.cfg: might in the future contain options for package hyperref
 
