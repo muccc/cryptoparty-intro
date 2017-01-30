@@ -8,3 +8,5 @@
 *.toc
 *.tex_dep
 *.swp
+*.xcf
+about.tex

@@ -42,6 +42,15 @@ endef
 .PHONY: all
 all: $(targets)
 
+flotum:
+	ln -sf about_flotum.tex about.tex
+
+floccc:
+	ln -sf about_floccc.tex about.tex
+
+michiccc:
+	ln -sf about_michiccc.tex about.tex
+
 $(png_figs): %.png: %.dot
 	@echo "DOT	$*"; \
 	$(DOT2PNG) $^ > $@
@@ -52,6 +61,7 @@ $(svgpdf_figs): %.pdf: %.svg
 
 .DELETE_ON_ERROR: $(pdf_docs)
 %.pdf: %.tex
+	@if test ! -h 'about.tex'; then echo "Select flavour by running 'make <enterFlavourHere>'"; false; fi
 	@echo "AUX	$*"; \
 	$(call try,cd `dirname $*` && $(TEX2PDF) `basename $*` && cd -)
 	@if test -f $*.glo; then \
