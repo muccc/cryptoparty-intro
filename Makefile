@@ -47,18 +47,21 @@ flotum:
 	ln -sf layout_floccc.tex layout.tex
 	ln -sf metadata_floccc.tex metadata.tex
 	ln -sf outro_floccc.tex outro.tex
+	ln -sf email_floccc.tex email.tex
 
 floccc:
 	ln -sf about_floccc.tex about.tex
 	ln -sf layout_floccc.tex layout.tex
 	ln -sf metadata_flotum.tex metadata.tex
 	ln -sf outro_floccc.tex outro.tex
+	ln -sf email_floccc.tex email.tex
 
 michiccc:
 	ln -sf about_michiccc.tex about.tex
 	ln -sf layout_michiccc.tex layout.tex
 	ln -sf metadata_michiccc.tex metadata.tex
 	ln -sf outro_michiccc.tex outro.tex
+	ln -sf email_michiccc.tex email.tex
 
 $(png_figs): %.png: %.dot
 	@echo "DOT	$*"; \
