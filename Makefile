@@ -45,14 +45,17 @@ all: $(targets)
 flotum:
 	ln -sf about_flotum.tex about.tex
 	ln -sf layout_floccc.tex layout.tex
+	ln -sf metadata_floccc.tex metadata.tex
 
 floccc:
 	ln -sf about_floccc.tex about.tex
 	ln -sf layout_floccc.tex layout.tex
+	ln -sf metadata_flotum.tex metadata.tex
 
 michiccc:
 	ln -sf about_michiccc.tex about.tex
 	ln -sf layout_michiccc.tex layout.tex
+	ln -sf metadata_michiccc.tex metadata.tex
 
 $(png_figs): %.png: %.dot
 	@echo "DOT	$*"; \
