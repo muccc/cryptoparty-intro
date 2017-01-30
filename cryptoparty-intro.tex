@@ -4,6 +4,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{helvet}
+\usepackage{tikz}
+\usepackage{cancel}
+\usetikzlibrary{positioning,shapes,calc}
 
 \includeonly{
     metadata,
@@ -16,6 +19,28 @@
 \title{\dctitle}
 \author{\dcauthorsshort}
 \date{\dcdate}
+
+% Placeholder for the email.tex section, content will be defined there
+\newcommand{\emailtext}{}
+\newcommand{\emailciphertext}{}
+\newlength{\messagewidth}
+
+% For blocks that contain only items
+\newenvironment{blit}[1]{%
+\begin{block}{#1}
+\begin{itemize}
+}{%
+\end{itemize}
+\end{block}
+}
+
+\newenvironment{blex}[1]{%
+\begin{block}{#1}
+\begin{description}
+}{%
+\end{description}
+\end{block}
+}
 
 \begin{document}
 
