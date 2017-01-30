@@ -45,14 +45,14 @@ all: $(targets)
 flotum:
 	ln -sf about_flotum.tex about.tex
 	ln -sf layout_floccc.tex layout.tex
-	ln -sf metadata_floccc.tex metadata.tex
+	ln -sf metadata_flotum.tex metadata.tex
 	ln -sf outro_floccc.tex outro.tex
 	ln -sf email_floccc.tex email.tex
 
 floccc:
 	ln -sf about_floccc.tex about.tex
 	ln -sf layout_floccc.tex layout.tex
-	ln -sf metadata_flotum.tex metadata.tex
+	ln -sf metadata_floccc.tex metadata.tex
 	ln -sf outro_floccc.tex outro.tex
 	ln -sf email_floccc.tex email.tex
 
