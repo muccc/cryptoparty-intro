@@ -1,0 +1,63 @@
+\section{Messenger}
+\begin{frame}{Warum auch das noch absichern?}
+\begin{itemize}
+\item Viel mehr Nachrichten\\ mit höchst privaten oder intimen Informationen\\ als z.B. E-Mail
+\item Häufig zur Koordination bei Treffen benutzt:\\ Bewegungsprofil!
+\end{itemize}
+
+\pause
+\begin{block}{Bestandsaufnahme}
+Wer benutzt
+\begin{itemize}
+\item<+-> WhatsApp
+\item<+-> Telegram
+\item<+-> Threema
+\item<+-> Signal
+%\item<+> \cancel{Bubcon}?! Erst rein nehmen, wenn Link zur Analyse wiedergefunden, war irgendwann mal auf Fefe
+\end{itemize}
+\end{block}
+\end{frame}
+
+\setbeamersize{description width=1em}
+\begin{frame}[t] % align on top so EFF scorecard does not move
+\frametitle{Vor- und Nachteile}
+\begin{blit}{Detailinfos zu vielen Messengern}
+\item EFF Secure Messaging Scorecard\\ {\small\url{https://www.eff.org/secure-messaging-scorecard}}
+\end{blit}
+
+\only<+>{
+\begin{blex}{WhatsApp}
+\item[+] Angeblich sehr gute Crypto (von Signal eingekauft)
+\item[-] Closed-Source
+\item[-] Metadatenanalyse, -weitergabe an Facebook
+\end{blex}}
+
+\only<+>{
+\begin{blex}{Telegram}
+\item[+] \glqq Sichere Chats\grqq\ erfüllen Kriterien
+\item[-] Läd Addressbuch auf Server hoch\\ um Kontakte zu benachrichtigen
+\item[-] Chats nicht standardmäßig sicher
+\item[-] \glqq Normale Chats\grqq\ werden auf den Servern gespeichert\\ und ausgiebig analysiert
+\end{blex}}
+
+\only<+>{
+\begin{blex}{Threema}
+\item[+] Chats erfüllen angeblich Kriterien
+\item[-] Closed-Source
+\end{blex}}
+
+\only<+>{
+\begin{blex}{Signal}
+\item \glqq Snowden approved\grqq
+\item[+] Chats standardmäßig sehr gut verschlüsselt
+\item[+] Keine Metadatenaufzeichnung
+\item[-] Läd Addressbuch auf Server hoch\\ um Kontakte zu benachrichtigen
+\item Genauere Sicherheitsanalyse: {\small\url{https://blog.fefe.de/?ts=a9226eda}}
+\end{blex}}
+
+%\begin{blex}{Bubcon}
+%\item {\Large\alert{Komplett unsicher!}}
+%\item Detaillierte Beschreibung des Totalversagens: \url{}
+%\end{blex}
+\end{frame}
+
