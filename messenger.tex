@@ -1,8 +1,8 @@
 \section{Messenger}
-\begin{frame}{Warum auch das noch absichern?}
+\begin{frame}{Motivation}
 \begin{itemize}
-\item Viel mehr Nachrichten\\ mit höchst privaten oder intimen Informationen\\ als z.B. E-Mail
-\item Häufig zur Koordination bei Treffen benutzt:\\ Bewegungsprofil!
+\item Komfortabel, auf Smartphone einfach nutzbar
+\item Wird im privaten Umfeld meist häufiger eingesetzt\\ als E-Mail
 \end{itemize}
 
 \pause
@@ -13,51 +13,96 @@ Wer benutzt
 \item<+-> Telegram
 \item<+-> Threema
 \item<+-> Signal
-%\item<+> \cancel{Bubcon}?! Erst rein nehmen, wenn Link zur Analyse wiedergefunden, war irgendwann mal auf Fefe
+\item<+-> Jabber
 \end{itemize}
 \end{block}
+\end{frame}
+
+\begin{frame}{Überblick}
+  \begin{itemize}
+    \item Geschlossene Systeme: WhatsApp \& Co
+      \begin{itemize}
+        \item App-Entwickler\\
+          ist Dienstanbieter\\
+          und Herr über die ``technische Sprache'' (das Protokoll)
+        \item Auswahl eines Dienstes\\bestimmt erreichbaren Personenkreis
+        \item meist Closed Source
+      \end{itemize}
+    \item Offene Systeme wie Jabber/XMPP
+      \begin{itemize}
+        \item App-Entwickler, Dienstanbieter und Protokoll-Standardisierer sind unterschiedliche Personen
+        \item App und Anbieter frei wählbar
+        \item meist Open Source
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \setbeamersize{description width=1em}
 \begin{frame}[t] % align on top so EFF scorecard does not move
 \frametitle{Vor- und Nachteile}
-\begin{blit}{Detailinfos zu vielen Messengern}
-\item EFF Secure Messaging Scorecard\\ {\small\url{https://www.eff.org/secure-messaging-scorecard}}
-\end{blit}
 
 \only<+>{
 \begin{blex}{WhatsApp}
-\item[+] Angeblich sehr gute Crypto (von Signal eingekauft)
-\item[-] Closed-Source
-\item[-] Metadatenanalyse, -weitergabe an Facebook
+\item[+] Nutzdaten werden verschlüsselt
+\item[+] Android: Verwendbar ohne Google Play
+\item[-] Closed Source
+\item[-] Anbieter erhält eine Kopie des vollständigen Telefonbuchs\\
+  (nicht nur WhatsApp-Kontakte)
+\end{blex}
+
+\textbf{Tipp:} Wer sein Telefonbuch nicht freigeben will,\\
+  kann den Zugriff darauf verweigern\\
+  (Android: ab Version 6).
+
+Der Nutzungskomfort ist dadurch eingeschränkt.
+}
+
+\only<+>{
+\begin{blex}{Signal}
+\item[+] Nutzdaten werden verschlüsselt
+\item[-] Android: Nicht verwendbar ohne Google Play
+\item[-] Anbieter erhält eine Kopie des vollständigen Telefonbuchs\\
+  (nicht nur Signal-Kontakte)
 \end{blex}}
 
 \only<+>{
 \begin{blex}{Telegram}
-\item[+] \glqq Sichere Chats\grqq\ erfüllen Kriterien
-\item[-] Läd Addressbuch auf Server hoch\\ um Kontakte zu benachrichtigen
-\item[-] Chats nicht standardmäßig sicher
-\item[-] \glqq Normale Chats\grqq\ werden auf den Servern gespeichert\\ und ausgiebig analysiert
+\item[+] \glqq Verschlüsselte Chats\grqq\ möglich
+\item[-] Anbieter erhält eine Kopie des vollständigen Telefonbuchs
+\item[-] Verschlüsselung standardmäßig nicht aktiv
+\item[-] \glqq Normale Chats\grqq\ werden im Klartext auf den Servern gespeichert
 \end{blex}}
 
 \only<+>{
 \begin{blex}{Threema}
-\item[+] Chats erfüllen angeblich Kriterien
-\item[-] Closed-Source
+\item[+] Chats verschlüsselt
+\item[+] komfortabler Schlüsselaustausch über QR-Code
+\item[+] Synchronisation des Telefonbuchs ist optional
+\item[-] Closed Source
+\item    kostenpflichtig
 \end{blex}}
+
 
 \only<+>{
-\begin{blex}{Signal}
-\item \glqq Snowden approved\grqq
-\item[+] Chats standardmäßig sehr gut verschlüsselt
-\item[+] Keine Metadatenaufzeichnung
-\item[-] Läd Addressbuch auf Server hoch\\ um Kontakte zu benachrichtigen
-\item Genauere Sicherheitsanalyse: {\small\url{https://blog.fefe.de/?ts=a9226eda}}
-\end{blex}}
+\begin{blex}{Jabber/XMPP}
+\item[+] Offenes System: Anbieter und App frei wählbar
+\item[+] Verschlüsselung möglich (OTR oder OMEMO)
+\item[+] keine Telefonbuch-Synchronisation vorgesehen
+\item[-] Crypto nicht ganz so nutzerfreundlich\\wie bei kommerziellen Anbietern\\(aber dafür sind wir ja alle hier :-)
+\end{blex}
+\begin{itemize}
+  \item    Apps: Conversations, pidgin, gajim, \ldots 
+  \item    Anbieter: Unis, Hackerspaces, CCC, jabber.org, \ldots
+\end{itemize}
 
-%\begin{blex}{Bubcon}
-%\item {\Large\alert{Komplett unsicher!}}
-%\item Detaillierte Beschreibung des Totalversagens: \url{}
-%\end{blex}
+}
 \end{frame}
 
+\begin{frame}{Zusammenfassung}
+  \begin{itemize}
+    \item Wer auf bestimmten Messenger nicht verzichten kann:\\Zugriff auf Kontakte verbieten!
+    \item Weitere Infos: EFF Secure Messaging Scorecard\\ {\url{https://www.eff.org/secure-messaging-scorecard}}\\
+      (gerade in Überarbeitung, alte Version noch verlinkt)
+  \end{itemize}
+  
+\end{frame}

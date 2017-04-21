@@ -63,6 +63,13 @@ michiccc:
 	ln -sf outro_michiccc.tex outro.tex
 	ln -sf email_michiccc.tex email.tex
 
+michilit:
+	ln -sf about_michiccc.tex about.tex
+	ln -sf layout_michiccc.tex layout.tex
+	ln -sf metadata_michilit.tex metadata.tex
+	ln -sf outro_michiccc.tex outro.tex
+	ln -sf email_michiccc.tex email.tex
+
 $(png_figs): %.png: %.dot
 	@echo "DOT	$*"; \
 	$(DOT2PNG) $^ > $@
