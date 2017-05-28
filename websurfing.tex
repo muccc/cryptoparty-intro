@@ -1,18 +1,42 @@
 \section{Web-Surfen}
 \begin{frame}{Tracking}
-  \begin{itemize}
-    \item Cookies und Co (HTML5 Persistent Local Storage, Flashcookies, \ldots)
-    \item Browser-Fingerabdruck
-    \item IP-Adresse
-  \end{itemize}
-  Jede Website und jedes Werbenetzwerk\\kann Personen und Computer (wieder-)erkennen
-
-  \begin{block}{Tools zur Aufklärung}
-  \begin{itemize}
-    \item \href{https://panopticlick.eff.org/}{EFF: Panopticlick}
-    \item \href{http://datenblumen.wired.de/}{Wired: Datenblumen}
-  \end{itemize}
+  \begin{block}{Ausgangslage}
+    Ein Großteil aller Websites nutzen Drittanbieter für
+    \begin{itemize}
+      \item Werbung
+      \item ``Social Media''-Präsenz
+      \item statistische Analysen
+      \item \ldots
+    \end{itemize}
   \end{block}
+
+    \pause
+    Diese Drittanbieter
+    \begin{itemize}
+      \item bekommen jeden Besuch einer solchen Webseite mit
+      \pause
+      \item können Besucher seitenübergreifend identifizieren
+      \pause
+      \item sind oft Dienstleister für sehr viele Webseiten gleichzeitig
+    \end{itemize}
+    \pause
+    Ja und?
+    \pause
+    \begin{itemize}
+      \item wenige Anbieter lernen sehr viel über jeden Nutzer
+      \pause
+      \item \ldots und verteilen manchmal (unfreiwillig) Schadsoftware
+    \end{itemize}
+  \end{frame}
+  \begin{frame}{Tracking}
+  \framesubtitle{Technische Umsetzung}
+  \begin{itemize}
+    \item IP-Adresse
+    \item Cookies und Co (HTML5 Persistent Local Storage, Flashcookies, \ldots)\\
+      \scriptsize Visualisierung: \url{http://datenblumen.wired.de/} \normalsize
+    \item Browser-Fingerabdruck\\
+      \scriptsize Visualisierung: \url{https://panopticlick.eff.org/} \normalsize
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Schutzmaßnahmen -- Level 1}
@@ -23,53 +47,30 @@
       \item DuckDuckGo
       \item Startpage
     \end{itemize}
-    \item Cookies verbieten, nur selektiv erlauben
-    \begin{itemize}
-      \item Firefox: about:preferences
-    \end{itemize}
+    \item Cookies verbieten oder nur selektiv erlauben
     \item Plugins auf ,,Click-to-use`` stellen
-    \begin{itemize}
-      \item Firefox: about:addons
-    \end{itemize}
+    \item Verlauf beim Beenden löschen
   \end{itemize}
 
-  Eventuell:
-  \begin{itemize}
-    \item Blockierung von ,,bösen`` Webseiten abschalten
-    \item Statusberichte des Browsers abschalten
-  \end{itemize}
+  %Eventuell:
+  %\begin{itemize}
+  %  \item Blockierung von ,,bösen`` Webseiten abschalten
+  %  \item Statusberichte des Browsers abschalten
+  %\end{itemize}
+  % https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work#w_what-information-is-sent-to-mozilla-or-its-partners-when-phishing-and-malware-protection-are-enabled
 \end{frame}
 
 \begin{frame}{Schutzmaßnahmen -- Level 2}
 \framesubtitle{Plug-Ins installieren}
   \begin{itemize}
-    \item Adblocker --\\ Schadsoftware immer öfter über Werbeanzeigen!
-    \begin{itemize}
-      \item uBlock origin
-      \begin{itemize}
-        \item Keine \glqq acceptable adds\grqq\ wie bei Adblock Plus
-        \item Blockiert auch andere nervige Dinge außer Werbung
-      \end{itemize}
-      \item \href{https://www.eff.org/privacybadger}{EFF: Privacy Badger}
-      \begin{itemize}
-        \item Blockiert anhand von Verhalten, nicht Listen
-      \end{itemize}
-      %\item TODO: RequestPolicy
-    \end{itemize}
-    \item NoScript
-    \begin{itemize}
-      \item Erlaubt gezieltes ein-/ausschalten von Java, JavaScript etc.
-    \end{itemize}
-    \item EFF: HTTPS-Everywhere
-    \begin{itemize}
-      \item Nutzt automatisch HTTPS, falls von Seite unterstützt
-      \item Benutzt lokale Liste der Seiten, keine Online-Abfrage
-    \end{itemize}
-    \item RefControl
-    \begin{itemize}
-      \item HTTP-Referrer = von welcher Seite komme ich
-    \end{itemize}
+    \item Adblocker
+    \item Tracking-Blocker
+    \item Cross-Domain-Request-Blocker
+    \item Referer-Manager
+    \item \ldots
   \end{itemize}
+  \pause
+  \textbf{Details später in Kleingruppen}
 \end{frame}
 
 \begin{frame}{Schutzmaßnahmen -- Level 3}
@@ -77,10 +78,14 @@
   \begin{itemize}
     \item \href{https://www.torproject.org}{Tor Browser Bundle (Freie Software)}
     \begin{itemize}
-      \item Anonymisierung des Netzwerkverkehrs\\durch ,,intelligente Umwege''
+      \item Anonymisierung des Webverkehrs\\durch ,,intelligente Umwege''\\
+        \scriptsize \url{https://www.torproject.org/about/overview} \normalsize
       \item Fingerabdruck bei allen Tor Browsern identisch
+      \item Gewählte Plugins vorinstalliert
+      \item Automatische Updates
       \item Hohe Sicherheit, aber prinzipbedingt langsamer
     \end{itemize}
+    \pause
     \item \href{https://tails.boum.org}{Tails (Freie Software)}
     \begin{itemize}
       \item Abgesichertes Betriebssystem inkl. Tor
@@ -89,6 +94,7 @@
       %   https://tails.boum.org/news/windows_camouflage_jessie/index.en.html
       %   https://tails.boum.org/blueprint/update_camouflage_for_jessie/
       %\item Sieht auf Wunsch nach Windows aus
+      \item Leitet gesamten Verkehr über Tor
     \end{itemize}
   \end{itemize}
 \end{frame}
