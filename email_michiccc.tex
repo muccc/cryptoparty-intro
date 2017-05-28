@@ -5,19 +5,72 @@
     \item abgehört
     \item gefälscht
   \end{itemize}
-  werden. Deshalb stellen wir vor, wie man
+  werden. \pause Deshalb stellen wir vor, wie man
   \begin{itemize}
+      \pause
     \item die Vertraulichkeit (das ,,Briefgeheimnis``) umsetzt
     \\ $\Rightarrow$ Verschlüsselung
+    \pause
     \item die Echtheit des Gegenübers sicherstellt
     \\ $\Rightarrow$ Digitale Signatur
-  \end{itemize}
-  Außerdem:
-  \begin{itemize}
-    \item Wie man sicherstellt, dass sein E-Mail-Passwort\\ nicht einfach mitgelesen werden kann
+    \pause
+    \item sicherstellt, dass sein E-Mail-Passwort\\ nicht einfach mitgelesen werden kann
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Hintergrundinfo Verschlüsselung}
+  \framesubtitle{Symmetrische Kryptografie}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{images/Orange_blue_symmetric_cryptography_de.pdf}
+  \end{center}
+  \begin{itemize}
+    \item Jahrtausende altes Konzept
+    \item \emph{Ein} Schlüssel zum Ver- und Entschlüsseln,\\den \emph{alle} Beteiligten kennen
+    \item Problem: Schlüsselaustausch
+    \begin{itemize}
+      \item Wer den Schlüssel kennt, kommt auch an die Daten
+      \item Wer den Schlüssel kontrolliert, kontrolliert die Daten
+      \begin{itemize}
+        \item Ransomware
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+  \tiny Bildquelle: \href{https://de.wikipedia.org/wiki/Datei:Orange_blue_symmetric_cryptography_de.svg}{,,Symmetrisches Kryptosystem'' von Bananenfalter / CC0}
+\end{frame}
+
+\begin{frame}{Hintergrundinfo Verschlüsselung}
+  \framesubtitle{Asymmetrische Kryptografie}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{images/Orange_blue_public_key_cryptography_de.pdf}
+  \end{center}
+  \begin{itemize}
+    \item Prinzip: Schlüssel besteht aus einer \emph{privaten} und einer \emph{öffentlichen} ,,Hälfte``
+    \begin{itemize}
+      \item Öffentlichen Teil darf/muss man weitergeben
+      \item Privaten Teil muss man unbedingt geheim halten
+    \end{itemize}
+    \item Wird verwendet, um vertraulichen Kanal aufzubauen
+    \item Problem weiterhin: Authentizität des öffentlichen Teils
+  \end{itemize}
+  \tiny Bildquelle: \href{https://commons.wikimedia.org/wiki/File:Orange_blue_public_key_cryptography_de.svg}{,,Asymmetrisches Kryptosystem mit Verschlüsselung und Entschlüsselung'' von Bananenfalter / CC0}
+\end{frame}
+
+\begin{frame}{Hintergrundinfo Verschlüsselung}
+  \framesubtitle{Asymmetrische Kryptografie -- Anwendungen}
+  \begin{itemize}
+    \item Verschlüsselung
+      \begin{itemize}
+        \item Absender \emph{verschlüsselt}\\ mit \emph{öffentlichem} Teil des \emph{Gegenübers}
+        \item Nur Gegenüber\\ kann mit \emph{privatem} Gegenstück \emph{entschlüsseln}
+      \end{itemize}
+    \item Digitale Signatur
+      \begin{itemize}
+        \item Absender unterschreibt mit \emph{eigenem privaten} Teil
+        \item Jeder kann mit \emph{öffentlichem} Gegenstück \emph{überprüfen}
+      \end{itemize}
+  \end{itemize}
+  Es ist mathematisch komplex und benötigt Jahrtausende,\\ um aus einer Signatur oder dem öffentlichen Teil\\ den privaten Teil zu berechnen
+\end{frame}
 \begin{frame}{E-Mail}{Funktionsweise}
   \includegraphics[width=.9\textwidth]{images/maildaten.pdf}
   \scriptsize
@@ -103,21 +156,6 @@ Was, wenn A eine Nachricht an B schicken will,\\ aber den öffentlichen Schlüss
       Enigmail     & GPG4Win  & --       \\
     \end{tabular}
   \end{block}
-\end{frame}
-
-\begin{frame}{Nächste Schritte:}
-  \begin{enumerate}
-    \item Software installieren (siehe vorige Folie)
-    \item Installationsassistent starten
-    \begin{enumerate}
-      \item Schlüsselpaar erzeugen
-      \item Passwort festlegen\\ (schützt privaten Schlüssel auf der Festplatte)
-      \item Identitäten hinzufügen\\ (für welche E-Mail-Adresse(n) der Schlüssel gilt)
-      \item Widerrufszertifikat auf USB-Stick speichern
-      \item Öffentlichen Schlüssel auf Keyserver hochladen
-    \end{enumerate}
-    \item Erste verschlüsselte und signierte E-Mail schicken :)
-  \end{enumerate}
 \end{frame}
 
 \endinput
