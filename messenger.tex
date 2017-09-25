@@ -19,45 +19,57 @@ Wer benutzt
 \end{frame}
 
 \setbeamersize{description width=1em}
-\begin{frame}[t] % align on top so EFF scorecard does not move
-\frametitle{Vor- und Nachteile}
+\begin{frame}{WhatsApp}
+\begin{blex}{Vor- und Nachteile}
+\item[+] Angeblich sehr gute Crypto (von Signal eingekauft)
+\item[+] Verwendbar ohne Google Play Services
+\item[-] Closed Source
+\item[-] Anbieter erhält komplettes Telefonbuch\\ (nicht nur WhatsApp Kontakte)
+\item[-] Metadatenanalyse, -weitergabe an Facebook
+\end{blex}
+\end{frame}
+
+\begin{frame}{Telegram}
+\begin{blex}{Vor- und Nachteile}
+\item[+] \glqq Sichere Chats\grqq\ erfüllen Kriterien der EFF
+\item[o] Überprüfung der Schlüssel über Muster
+\item[-] Chats nicht standardmäßig verschlüsselt (\glqq sicher\grqq)
+\item[-] Anbieter erhält komplettes Telefonbuch\\ (nicht nur Telegram Kontakte)
+\item[-] \glqq Normale Chats\grqq\ werden im Klartext beim Anbieter\\ gespeichert und ausgiebig analysiert
+\end{blex}
+\end{frame}
+
+\begin{frame}{Threema}
+\begin{blex}{Vor- und Nachteile}
+\item[+] Chats erfüllen angeblich Kriterien der EFF\\ (nicht überprüfbar weil closed Source)
+\item[+] Synchronisation des Telefonbuchs optional
+\item[+] Überprüfung der Schlüssel über QR-Code
+\item[o] Kostenpflichtig
+\item[-] Closed Source
+\end{blex}
+\end{frame}
+
+\begin{frame}{Signal}
+\begin{blex}{Vor- und Nachteile}
+\item \glqq Snowden approved\grqq
+\item[+] Chats standardmäßig sehr gut verschlüsselt
+\item[+] Keine Metadatenaufzeichnung
+\item[+] Überprüfung der Schlüssel über QR-Code
+\item[-] Nicht verwendbar ohne Google Play Services
+\item[-] Anbieter erhält komplettes Telefonbuch\\ (nicht nur Signal Kontakte)
+\end{blex}
+Genauere Sicherheitsanalyse: {\small\url{https://blog.fefe.de/?ts=a9226eda}}
+\end{frame}
+
+\begin{frame}{Zusammenfassung}
 \begin{blit}{Detailinfos zu vielen Messengern}
 \item EFF Secure Messaging Scorecard\\ {\small\url{https://www.eff.org/secure-messaging-scorecard}}
 \end{blit}
 
-\only<+>{
-\begin{blex}{WhatsApp}
-\item[+] Angeblich sehr gute Crypto (von Signal eingekauft)
-\item[-] Closed-Source
-\item[-] Metadatenanalyse, -weitergabe an Facebook
-\end{blex}}
-
-\only<+>{
-\begin{blex}{Telegram}
-\item[+] \glqq Sichere Chats\grqq\ erfüllen Kriterien
-\item[-] Läd Addressbuch auf Server hoch\\ um Kontakte zu benachrichtigen
-\item[-] Chats nicht standardmäßig sicher
-\item[-] \glqq Normale Chats\grqq\ werden auf den Servern gespeichert\\ und ausgiebig analysiert
-\end{blex}}
-
-\only<+>{
-\begin{blex}{Threema}
-\item[+] Chats erfüllen angeblich Kriterien
-\item[-] Closed-Source
-\end{blex}}
-
-\only<+>{
-\begin{blex}{Signal}
-\item \glqq Snowden approved\grqq
-\item[+] Chats standardmäßig sehr gut verschlüsselt
-\item[+] Keine Metadatenaufzeichnung
-\item[-] Läd Addressbuch auf Server hoch\\ um Kontakte zu benachrichtigen
-\item Genauere Sicherheitsanalyse: {\small\url{https://blog.fefe.de/?ts=a9226eda}}
-\end{blex}}
-
-%\begin{blex}{Bubcon}
-%\item {\Large\alert{Komplett unsicher!}}
-%\item Detaillierte Beschreibung des Totalversagens: \url{}
-%\end{blex}
+\begin{itemize}
+\item Ab Android 6: Zugriff auf Telefonbuch verbieten
+\begin{itemize}
+\item Dann aber nur noch Nummern statt Namen
+\end{itemize}
+\end{itemize}
 \end{frame}
-
