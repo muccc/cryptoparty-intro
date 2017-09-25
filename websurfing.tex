@@ -1,18 +1,43 @@
 \section{Web-Surfen}
-\begin{frame}{Tracking}
+\begin{frame}{Tracking -- Ausgangslage}
+  Ein Großteil aller Websites nutzen Drittanbieter für
   \begin{itemize}
-    \item Cookies und Co (HTML5 Persistent Local Storage, Flashcookies, \ldots)
-    \item Browser-Fingerabdruck
-    \item IP-Adresse
+    \item Werbung
+    \item \glqq Social Media\grqq-Präsenz
+    \item Statistische Analysen
+    \item \dots
   \end{itemize}
-  Jede Website und jedes Werbenetzwerk\\kann Personen und Computer (wieder-)erkennen
+  \pause
+  Diese Drittanbieter
+  \begin{itemize}
+    \item Bekommen jeden Besuch auf diesen Webseiten mit
+    \item Können Besucher seitenübergreifend identifizieren
+    \item Sind oft auf sehr vielen Webseiten gleichzeitig
+  \end{itemize}
+  \pause
+  Ja und?
+  \pause
+  \begin{itemize}
+    \item Wenige Anbieter lernen sehr viel über jeden Nutzer
+    \item \dots oder verteilen sogar (unfreiwillig) Schadsoftware
+  \end{itemize}
+\end{frame}
 
-  \begin{block}{Tools zur Aufklärung}
+\begin{frame}{Tracking -- Technische Umsetzung}
   \begin{itemize}
-    \item \href{https://panopticlick.eff.org/}{EFF: Panopticlick}
-    \item \href{http://datenblumen.wired.de/}{Wired: Datenblumen}
+    \item IP-Adresse
+    \begin{itemize}
+      \item Kann man mit Tor verschleiern $\rightarrow$ später mehr
+    \end{itemize}
+    \item Cookies und Co.\\ (HTML5 Persistent Local Storage, Flashcookies, \dots)
+    \begin{itemize}
+      \item Visualisierung: \url{http://datenblumen.wired.de/}
+    \end{itemize}
+    \item Browser-Fingerabdruck
+    \begin{itemize}
+      \item Visualisierung: \url{https://panopticlick.eff.org/}
+    \end{itemize}
   \end{itemize}
-  \end{block}
 \end{frame}
 
 \begin{frame}{Schutzmaßnahmen -- Level 1}
