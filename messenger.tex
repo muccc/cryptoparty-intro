@@ -39,79 +39,59 @@ Wer benutzt
 \end{frame}
 
 \setbeamersize{description width=1em}
-\begin{frame}[t] % align on top so EFF scorecard does not move
-\frametitle{Vor- und Nachteile}
 
-\only<+>{
-\begin{blex}{WhatsApp}
-\item[+] Nutzdaten werden verschlüsselt
-\item[+] Android: Verwendbar ohne Google Play
+\begin{frame}{WhatsApp}
+\begin{blex}{Vor- und Nachteile}
+\item[+] Angeblich sehr gute Crypto (von Signal eingekauft)
+\item[+] Verwendbar ohne Google Play
 \item[-] Closed Source
-\item[-] Anbieter erhält eine Kopie des vollständigen Telefonbuchs\\
+\item[-] Anbieter erhält eine vollständiges Telefonbuchs\\
   (nicht nur WhatsApp-Kontakte)
+\item[-] Metadatenanalyse, -weitergabe an Facebook
 \end{blex}
+\end{frame}
 
-\textbf{Tipp:} Wer sein Telefonbuch nicht freigeben will,\\
-  kann den Zugriff darauf verweigern\\
-  (Android: ab Version 6).
+\begin{frame}{Telegram}
+\begin{blex}{Vor- und Nachteile}
+\item[+] \glqq Sichere Chats\grqq\ erfüllen Kriterien der EFF
+\item[o] Überprüfung der Schlüssel über Muster
+\item[-] Chats nicht standardmäßig verschlüsselt
+\item[-] Anbieter erhält vollständiges Telefonbuch\\ (nicht nur Telegram-Kontakte)
+\item[-] \glqq Normale Chats\grqq\ werden im Klartext beim Anbieter\\ gespeichert und ausgiebig analysiert
+\end{blex}
+\end{frame}
 
-Der Nutzungskomfort ist dadurch eingeschränkt.
-}
-
-\only<+>{
-\begin{blex}{Signal}
-\item[+] Nutzdaten werden verschlüsselt
-\item[-] Android: Nur eingeschränkt verwendbar ohne Google Play
-\item[-] Anbieter erhält eine Kopie des vollständigen Telefonbuchs\\
-  (nicht nur Signal-Kontakte)
-\end{blex}}
-
-\only<+>{
-\begin{blex}{Telegram}
-\item[+] \glqq Verschlüsselte Chats\grqq\ möglich
-\item[-] Anbieter erhält eine Kopie des vollständigen Telefonbuchs
-\item[-] Verschlüsselung standardmäßig nicht aktiv
-\item[-] \glqq Normale Chats\grqq\ werden im Klartext auf den Servern gespeichert
-\end{blex}}
-
-\only<+>{
-\begin{blex}{Threema}
-\item[+] Chats verschlüsselt
-\item[+] komfortabler Schlüsselaustausch über QR-Code
-\item[+] Synchronisation des Telefonbuchs ist optional
+\begin{frame}{Threema}
+\begin{blex}{Vor- und Nachteile}
+\item[+] Chats erfüllen angeblich Kriterien der EFF\\ (nicht überprüfbar weil closed Source)
+\item[+] Synchronisation des Telefonbuchs optional
+\item[+] Überprüfung der Schlüssel über QR-Code
+\item[o] Kostenpflichtig
 \item[-] Closed Source
-\item    kostenpflichtig
-\end{blex}}
-
-\only<+>{
-\begin{blex}{Jabber/XMPP}
-\item[+] Offenes System: Anbieter und App frei wählbar
-\item[+] Verschlüsselung möglich (OTR oder OMEMO)
-\item[+] keine Telefonbuch-Synchronisation vorgesehen
-\item[-] Crypto nicht ganz so nutzerfreundlich\\wie bei kommerziellen Anbietern\\(aber dafür sind wir ja alle hier :-)
 \end{blex}
-\begin{itemize}
-  \item    Apps: Conversations, pidgin, gajim, \ldots 
-  \item    Anbieter: Unis, Hackerspaces, CCC, jabber.org, \ldots
-\end{itemize}
-}
+\end{frame}
 
-\only<+>{
-\begin{blex}{Matrix}
-\item[+] Offenes System: Anbieter frei wählbar
-\item[+] Verschlüsselung möglich
-\item[+] Telefonbuch-Synchronisation nicht zwingend
-\item[+] Anbindung an Drittsysteme möglich (IRC, Skype, \ldots)
-\item[-] Hintergrund/Historie der Entwickler umstritten
+\begin{frame}{Signal}
+\begin{blex}{Vor- und Nachteile}
+\item \glqq Snowden approved\grqq
+\item[+] Chats standardmäßig sehr gut verschlüsselt
+\item[+] Keine Metadatenaufzeichnung
+\item[+] Überprüfung der Schlüssel über QR-Code
+\item[-] Ohne Google Play Services eingeschränkte Funktion 
+\item[-] Anbieter erhält komplettes Telefonbuch\\ (nicht nur Signal Kontakte)
 \end{blex}
-}
+Genauere Sicherheitsanalyse: {\small\url{https://blog.fefe.de/?ts=a9226eda}}
 \end{frame}
 
 \begin{frame}{Zusammenfassung}
-  \begin{itemize}
-    \item Wer auf bestimmten Messenger nicht verzichten kann:\\Zugriff auf Kontakte verbieten!
-    \item Weitere Infos: EFF Secure Messaging Scorecard\\ {\url{https://www.eff.org/secure-messaging-scorecard}}\\
-      (gerade in Überarbeitung, alte Version noch verlinkt)
-  \end{itemize}
-  
+\begin{blit}{Detailinfos zu vielen Messengern}
+\item EFF Secure Messaging Scorecard\\ {\small\url{https://www.eff.org/secure-messaging-scorecard}}
+\end{blit}
+
+\begin{itemize}
+\item Ab Android 6: Zugriff auf Telefonbuch verbieten
+\begin{itemize}
+\item Dann aber nur noch Nummern statt Namen
+\end{itemize}
+\end{itemize}
 \end{frame}
