@@ -5,17 +5,16 @@
     \item abgehört
     \item gefälscht
   \end{itemize}
-  werden. Deshalb stellen wir vor, wie man
+  werden. \pause Deshalb stellen wir vor, wie man
   \begin{itemize}
+      \pause
     \item die Vertraulichkeit (das ,,Briefgeheimnis``) umsetzt
     \\ $\Rightarrow$ Verschlüsselung
+    \pause
     \item die Echtheit des Gegenübers sicherstellt
     \\ $\Rightarrow$ Digitale Signatur
   \end{itemize}
-  Außerdem:
-  \begin{itemize}
-    \item Wie man sicherstellt, dass sein E-Mail Passwort\\ nicht einfach mitgelesen werden kann
-  \end{itemize}
+  \pause \textbf{Außerdem:} Wie man sicherstellt, dass sein E-Mail Passwort\\ nicht einfach mitgelesen werden kann
 \end{frame}
 
 \renewcommand{\emailtext}{Von: Alice@provider1.de\\An: Bob@provider2.com\\Betreff: Hallo\\Hallo Bob, wie gehts dir?\\LG Alice}
@@ -131,7 +130,7 @@ Was, wenn A eine Nachricht an B schicken will,\\ aber den öffentlichen Schlüss
 \end{center}
 \end{frame}
 
-\begin{frame}{Wie stellt man Vertrauen in Schlüssel her?}
+\begin{frame}{Wie stellt man Vertrauen in öffentliche Schlüssel her?}
   \begin{itemize}
     \item S/MIME -- Hierarchischer Vertrauensansatz
     \begin{itemize}
@@ -158,35 +157,20 @@ Was, wenn A eine Nachricht an B schicken will,\\ aber den öffentlichen Schlüss
     Macht die eigentliche Ver-/Entschlüsselung \& Signatur
 
     \vspace{1ex}
-    \begin{tabular}{ccc}
-      Linux:            & Windows: & Android:     \\
-      \textit{on-board} & GPG4Win  & OpenKeychain \\
+    \begin{tabular}{cccc}
+      Linux:            & Windows: & Android:     & Mac:\\
+      \textit{on-board} & GPG4Win  & OpenKeychain & GPGTools\footnote{kommerziell}\\
     \end{tabular}
   \end{block}
   \begin{block}{Plug-In fürs Mailprogramm}
     Grafische Oberfläche, leichtere Schlüsselverwaltung, etc.
 
     \vspace{1ex}
-    \begin{tabular}{ccc}
-      Thunderbird: & Outlook: & K9-Mail: \\
-      Enigmail     & GPG4Win  & \textit{integriert} \\
+    \begin{tabular}{cccc}
+      Thunderbird: & Outlook: & K9-Mail:            & Apple Mail:\\
+      Enigmail     & GPG4Win  & \textit{integriert} & GPGTools\\
     \end{tabular}
   \end{block}
-\end{frame}
-
-\begin{frame}{Nächste Schritte:}
-  \begin{enumerate}
-    \item Software installieren (siehe vorige Folie)
-    \item Installationsassistent starten
-    \begin{enumerate}
-      \item Schlüsselpaar erzeugen
-      \item Passwort festlegen\\ (schützt privaten Schlüssel auf der Festplatte)
-      \item Identitäten hinzufügen\\ (für welche E-Mail-Adresse(n) der Schlüssel gilt)
-      \item Widerrufszertifikat auf USB-Stick speichern
-      \item Öffentlichen Schlüssel auf Keyserver hochladen
-    \end{enumerate}
-    \item Erste verschlüsselte und signierte E-Mail schicken :)
-  \end{enumerate}
 \end{frame}
 
 \endinput

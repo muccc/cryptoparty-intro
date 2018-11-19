@@ -42,34 +42,6 @@ endef
 .PHONY: all
 all: $(targets)
 
-flotum:
-	ln -sf about_flotum.tex about.tex
-	ln -sf layout_floccc.tex layout.tex
-	ln -sf metadata_flotum.tex metadata.tex
-	ln -sf outro_floccc.tex outro.tex
-	ln -sf email_floccc.tex email.tex
-
-floccc:
-	ln -sf about_floccc.tex about.tex
-	ln -sf layout_floccc.tex layout.tex
-	ln -sf metadata_floccc.tex metadata.tex
-	ln -sf outro_floccc.tex outro.tex
-	ln -sf email_floccc.tex email.tex
-
-michiccc:
-	ln -sf about_michiccc.tex about.tex
-	ln -sf layout_michiccc.tex layout.tex
-	ln -sf metadata_michiccc.tex metadata.tex
-	ln -sf outro_michiccc.tex outro.tex
-	ln -sf email_michiccc.tex email.tex
-
-michilit:
-	ln -sf about_michiccc.tex about.tex
-	ln -sf layout_michiccc.tex layout.tex
-	ln -sf metadata_michilit.tex metadata.tex
-	ln -sf outro_michiccc.tex outro.tex
-	ln -sf email_michiccc.tex email.tex
-
 $(png_figs): %.png: %.dot
 	@echo "DOT	$*"; \
 	$(DOT2PNG) $^ > $@
@@ -80,7 +52,6 @@ $(svgpdf_figs): %.pdf: %.svg
 
 .DELETE_ON_ERROR: $(pdf_docs)
 %.pdf: %.tex
-	@if test ! -h 'about.tex'; then echo "Select flavour by running 'make <enterFlavourHere>'"; false; fi
 	@echo "AUX	$*"; \
 	$(call try,cd `dirname $*` && $(TEX2PDF) `basename $*` && cd -)
 	@if test -f $*.glo; then \
