@@ -1,34 +1,32 @@
 \section{Web-Surfen}
 \begin{frame}{Tracking}
-  \begin{block}{Ausgangslage}
+  \begin{block}<+->{Ausgangslage}
     Ein Großteil aller Websites nutzen Drittanbieter für
     \begin{itemize}
       \item Werbung
-      \item ``Social Media''-Präsenz
+      \item \glqq Social Media\grqq -Präsenz
       \item statistische Analysen
       \item \ldots
     \end{itemize}
   \end{block}
 
-    \pause
-    Diese Drittanbieter
-    \begin{itemize}
-      \item bekommen jeden Besuch einer solchen Webseite mit
-      \pause
-      \item können Besucher seitenübergreifend identifizieren
-      \pause
-      \item sind oft Dienstleister für sehr viele Webseiten gleichzeitig
-    \end{itemize}
-    \pause
-    Ja und?
-    \pause
-    \begin{itemize}
-      \item wenige Anbieter lernen sehr viel über jeden Nutzer
-      \pause
-      \item \ldots und verteilen manchmal (unfreiwillig) Schadsoftware
-    \end{itemize}
-  \end{frame}
-  \begin{frame}{Tracking}
+  \visible<+->{%
+  Diese Drittanbieter
+  \begin{itemize}
+    \item<+-> bekommen jeden Besuch einer solchen Webseite mit
+    \item<+-> können Besucher seitenübergreifend identifizieren
+    \item<+-> sind auf sehr vielen Webseiten gleichzeitig präsent
+  \end{itemize}}
+
+  \visible<+->{%
+  Ja und?
+  \begin{itemize}
+    \item<+-> Wenige Anbieter lernen sehr viel über jeden Nutzer
+    \item<+-> Manchmal verteilen sie unabsichtlich Schadsoftware
+  \end{itemize}}
+\end{frame}
+
+\begin{frame}{Tracking}
   \framesubtitle{Technische Umsetzung}
   \begin{itemize}
     \item IP-Adresse
@@ -83,11 +81,11 @@
       \item Gewählte Plugins vorinstalliert
       \item Automatische Updates
       \item Hohe Sicherheit, aber prinzipbedingt langsamer
-      \item \textbf{Aufpassen bei}
-        \begin{itemize}
-          \item uverschlüsselten Verbindungen -- Tor-Knoten (NSA?) können mitlesen
-          \item Kommunikationspartnern, die einen sowieso kennen
-        \end{itemize}<++>
+%      \item Aufpassen bei:
+%        \begin{itemize}
+%          \item Unverschlüsselte Verbindungen können am und nach dem Ausgangsknoten immer noch abgehört werden
+%          \item Kommunikationspartnern, die einen sowieso kennen
+%        \end{itemize}
     \end{itemize}
     \pause
     \item \href{https://tails.boum.org}{Tails (Freie Software)}
@@ -99,7 +97,6 @@
       %   https://tails.boum.org/news/windows_camouflage_jessie/index.en.html
       %   https://tails.boum.org/blueprint/update_camouflage_for_jessie/
       %\item Sieht auf Wunsch nach Windows aus
-      \item Leitet gesamten Verkehr über Tor
     \end{itemize}
   \end{itemize}
 \end{frame}
