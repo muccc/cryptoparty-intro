@@ -9,3 +9,5 @@
 *.tex_dep
 *.swp
 *.xcf
+*.fls
+*.fdb_latexmk
