@@ -1,0 +1,27 @@
+name: 'build'
+
+on:
+  push:
+
+jobs:
+  create_tar:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install inkscape texlive-latex-base texlive-latex-recommended texlive-pictures texlive-latex-extra texlive-lang-german
+        run: |
+          sudo apt update
+          sudo apt install -y inkscape texlive-latex-base texlive-latex-recommended texlive-pictures texlive-latex-extra texlive-lang-german
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: build
+        run: make
+
+      - name: Upload cryptoparty-intro.pdf
+        uses: actions/upload-artifact@v3
+        with:
+          name: cryptoparty-intro
+          path: cryptoparty-intro.pdf
